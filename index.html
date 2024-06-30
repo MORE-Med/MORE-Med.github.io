@@ -290,12 +290,13 @@
 
   <body>
 	<div class="content">
+		
 		<br>
           <center>
           	<span style="font-size:36px">MORE: Multi-Organ medical image REconstruction</span>
 			<br><br>
 	  		  <table align=center width=700px>
-				
+
 	  			  <tr>
 	  	              <td align=center width=200px>
 	  					<center><span style="font-size:20px"><a>Shaokai Wu</a></span></center>
@@ -353,21 +354,24 @@
           </center>
 		  <p><strong>Quick Jump:</strong></p>
 			<ol>
+				<!-- <li><a href="#news">News</a></li> -->
 				<li><a href="#overview">Overview</a></li>
-				<li><a href="#news">News</a></li>
-				<li><a href="#demonstration video">Examples</a></li>
-				<li><a href="#benchmark">Benchmark</a></li>
+				<li><a href="#more">MORE Dataset</a></li>
+				<li><a href="#gbir">GBIR Model</a></li>
+				<!-- <li><a href="#benchmark">Benchmarks</a></li> -->
 			</ol>
 	</div>
-    
-	<div class="content" id="overview">
+<!--     
+	<div class="content" id="news">
 		<table align=center width=850px>
 			<center><h1>News</h1></center>
 		</table>
 		<br>2024.6.1 Update: The Webpage is under construction. Now the dataset is available at <a href='https://huggingface.co/datasets/WSKINGDOM/MORE'> Huggingface. </a></br>
 	</div>
+	 -->
 
 	<div class="content" id="overview">
+
 		<table align=center width=850px>
 			<center><h1>Overview</h1></center>
 		</table>
@@ -376,9 +380,36 @@
 		<br>(1) Larger. There are 135 CT instances and 54 MRI instances in total, with 65,575 CT scans and 7,498 MRI scans.
 		<br>(2) Multi-Organ. CT part contain 15 types of organs and MRI part contain 5 types of organs.
 		<br>(3) Multi-Lesion.  CT part contain 25 types of lesions and MRI part contain 17 types of lesions.
+		<br></br>
+
+		  <div style="display: flex;">
+			<img src="Assets/ct_00.png" alt="Image 1" style="width:50%;">
+			<img src="Assets/MRI++_00.png" alt="Image 2" style="width:50%;">
+		  </div>
+		  
+	</div>       
+	<div class="content" id="more">
+		<table align=center width=850px>
+			<center><h1>MORE Dataset</h1></center>
+		</table>
+		<p>Our dataset is available at <a href='https://huggingface.co/datasets/WSKINGDOM/MORE'> Huggingface. </a></p>
 		<br>Below is some samples of MORE dataset:</br>
 		<img name="stone" src = "./Assets/sample.png", width="100%"></img>
-	</div>       
+	</div>
+
+	<div class="content" id="gbir">
+		<table align=center width=850px>
+			<center><h1>GBIR Model</h1></center>
+		</table>
+		<video width="100%" controls>
+			<source src="Assets/movie_018.mp4" type="video/mp4">
+			Your browser does not support the video tag.
+		  </video>
+		  <br></br>
+		<p>Currently we provide the code of all models in the supplementary materials, and we will release them on GitHub soon </a></p>
+		<br>Below shows the distinctive pipelines of GBIR from previous neural-network based methods</br>
+		<img name="stone" src = "./Assets/Pipeline_00.png", width="100%"></img>
+	</div>
 </body>
 </html>
  
