@@ -369,31 +369,42 @@
 		<br>2024.6.1 Update: The Webpage is under construction. Now the dataset is available at <a href='https://huggingface.co/datasets/WSKINGDOM/MORE'> Huggingface. </a></br>
 	</div>
 	 -->
-
 	<div class="content" id="overview">
 
 		<table align=center width=850px>
 			<center><h1>Overview</h1></center>
 		</table>
+		<p>In this paper, we introduce the MORE dataset and the GBIR model, both of which are designed to facilitate the development of medical image reconstruction algorithms.</p>
+	
+		
+		<p>		The MORE dataset was developed to address the limitations of existing medical imaging datasets, which often focus on specific organs and lack diversity. The aim is to create a resource that supports the evaluation of methods across different anatomical regions, ensuring that AI models can generalize well across various clinical scenarios.</p>
 
-		We propose a comprehensive dataset of both CT and MRI for the purpose of medical image reconstruction. Compared to previous dataset, our dataset has the following advantages:
-		<br>(1) Larger. There are 135 CT instances and 54 MRI instances in total, with 65,575 CT scans and 7,498 MRI scans.
-		<br>(2) Multi-Organ. CT part contain 15 types of organs and MRI part contain 5 types of organs.
-		<br>(3) Multi-Lesion.  CT part contain 25 types of lesions and MRI part contain 17 types of lesions.
-		<br></br>
+
+		 <p>The MORE dataset has the following features:</p>
+		(1) Large. There are 135 CT instances and 54 MRI instances in total, with 65,575 CT scans and 7,498 MRI scans.<br>
+		(2) Multi-Organ. CT part contain 15 types of organs and MRI part contain 5 types of organs.<br>
+		(3) Multi-disease.  CT part contain 25 types of diseases and MRI part contain 17 types of diseases.<br>
+		<br>
 
 		  <div style="display: flex;">
 			<img src="Assets/ct_00.png" alt="Image 1" style="width:50%;">
 			<img src="Assets/MRI++_00.png" alt="Image 2" style="width:50%;">
 		  </div>
+		
+		<br>
+		<br>
+		Our GBIR (Gaussian-Based Iterative Reconstruction) framework introduces a novel approach to medical image reconstruction by modeling the 3D volume as a set of learnable Gaussians. Notably, GBIR is a different Gaussian representation and reconstruction method from the heated 3D Gaussian Splatting. Our GBIR directly reconstructs the 3D volume from the Gaussian representation without the need for intermediate steps, such as splatting and view synthesis. 
+		<br>
+		<br><img name="stone" src = "./Assets/gbir.png", width="100%"></img>
+		
+		In the beginning of each iteration, the learnable Gaussians are constrained into 3-sigma range, and then discretized and aligned to the grid. During our high parallel efficient reconstruction, the total volume is reconstructed by the summation of the contribution of Gaussian volumes. The reconstruction process is differentiable and directly supervised by the measurement, thus GBIR can be trained end-to-end.
 		  
 	</div>       
 	<div class="content" id="more">
 		<table align=center width=850px>
 			<center><h1>MORE Dataset</h1></center>
 		</table>
-		<p>Our dataset is available at <a href='https://huggingface.co/datasets/WSKINGDOM/MORE'> Huggingface. </a></p>
-		<br>Below is some samples of MORE dataset:</br>
+		<p>Our dataset is available at <a href='https://huggingface.co/datasets/WSKINGDOM/MORE'> Huggingface. </a> Below we show some samples of MORE dataset:</p>
 		<img name="stone" src = "./Assets/sample.png", width="100%"></img>
 	</div>
 
@@ -401,16 +412,13 @@
 		<table align=center width=850px>
 			<center><h1>GBIR Model</h1></center>
 		</table>
-		<video width="100%" controls>
-			<source src="Assets/movie_018.mp4" type="video/mp4">
-			Your browser does not support the video tag.
-		  </video>
+		<img src="vis3.gif" width="100%">
 		  <br></br>
-		<p>Currently we provide the code of all models in the supplementary materials, and we will release them on GitHub soon </a></p>
+		<p>We provide the code of all models in the supplementary materials for reproductivity, and they will be released to GitHub soon.</a></p>
 		<br>Below shows the distinctive pipelines of GBIR from previous neural-network based methods</br>
-		<img name="stone" src = "./Assets/Pipeline_00.png", width="100%"></img>
+		<br><img name="stone" src = "./Assets/Pipeline_00.png", width="100%"></img></br>
 		<br></br>
-		<br><img name="stone" src = "./Assets/gbir.png", width="100%"></img></br>
+		
 	</div>
 </body>
 </html>
