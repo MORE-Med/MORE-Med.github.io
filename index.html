@@ -395,7 +395,7 @@
 		<br>
 		Our GBIR (Gaussian-Based Iterative Reconstruction) framework introduces a novel approach to medical image reconstruction by modeling the 3D volume as a set of learnable Gaussians. Notably, GBIR is a different Gaussian representation and reconstruction method from the heated 3D Gaussian Splatting. Our GBIR directly reconstructs the 3D volume from the Gaussian representation without the need for intermediate steps, such as splatting and view synthesis. 
 		<br>
-		<br><img name="stone" src = "./Assets/gbir.png", width="100%"></img>
+		<br><img name="stone" src = "./Assets/gbir2.png", width="100%"></img>
 		
 		In the beginning of each iteration, the learnable Gaussians are constrained into 3-sigma range, and then discretized and aligned to the grid. During our high parallel efficient reconstruction, the total volume is reconstructed by the summation of the contribution of Gaussian volumes. The reconstruction process is differentiable and directly supervised by the measurement, thus GBIR can be trained end-to-end.
 		  
