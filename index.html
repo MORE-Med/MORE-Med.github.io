@@ -293,21 +293,20 @@
 		
 		<br>
           <center>
-          	<span style="font-size:36px">GBIR: A Novel Gaussian Iterative Method for Medical Image Reconstruction</span>
-			<br><br>
+          	<span style="font-size:28px">GBIR: A Novel Gaussian Iterative Method for Medical Image Reconstruction</span>
 			<br>
-          		<span style="font-size:20px"> ICLR 2025</span>
+			<br>
+			  <a href='https://openreview.net/forum?id=AkCWbxntll'> ICLR 2025 Under Review</a></span>
+			  <br>
+			  <br>
+				<table align=center width=850px id="vis">
+					<center><h1>Visualization</h1></center>
+				</table>
+				<img name="vis" src = "./Assets/vis_comparison.png", width="100%"></img></center>
+				<p style="font-size:16px;"> Visualization of reconstruction results obtained using different methods. The first row displays the reconstructed 3D volumes, while the second row shows the residual images, representing the differences between the reconstructed volume and the ground truth volume. </p>
+			<br>
+          		
 			<br><br>
-	  		  <table align=center width=650px>
-	  			  <tr>
-	  	              <td align=center width=150px>
-	  					<center>
-							<span style="font-size:20px"><a href='https://openreview.net/forum?id=AkCWbxntll'> [Paper]</a></span>
-							&nbsp&nbsp&nbsp&nbsp&nbsp
-		  		  		</center>
-		  		  	  </td>
-	  			  <tr>
-			  </table>
           </center>
 		  <p><strong>Quick Jump:</strong></p>
 			<ol>
@@ -319,61 +318,63 @@
 				<!-- <li><a href="#benchmark">Benchmarks</a></li> -->
 			</ol>
 	</div>
-	<div class="content" id="vis">
-		<table align=center width=850px>
-			<center><h1>Visualization</h1></center>
-		</table>
-		
-		<img name="vis" src = "./Assets/vis_comparison.png", width="100%"></img>
-		<p> Here, we present the visualization of reconstruction results obtained using different methods. The first row displays the reconstructed 3D volumes, while the second row shows the residual images, representing the differences between the reconstructed volumes and the ground truth volumes. </p>
-		  <br></br>
-	
-		
-	</div>
+
 	  
 	<div class="content" id="overview">
 
 		<table align=center width=850px>
 			<center><h1>Overview</h1></center>
 		</table>
-		<p>In this paper, we introduce the MORE dataset and the GBIR model, both of which are designed to facilitate the development of medical image reconstruction algorithms.</p>
+		<p>In this research, we introduce the GBIR model and the MORE dataset, both of which are designed to facilitate the development of medical image reconstruction algorithms.</p>
 	
 		
 		<p>		The MORE dataset was developed to address the limitations of existing medical imaging datasets, which often focus on specific organs and lack diversity. The aim is to create a resource that supports the evaluation of methods across different anatomical regions, ensuring that AI models can generalize well across various clinical scenarios.</p>
 
+		<p>
+					Our GBIR (Gaussian-Based Iterative Reconstruction) framework introduces a novel approach to medical image reconstruction by modeling the 3D volume as a set of learnable Gaussians. Notably, GBIR is a different Gaussian representation and reconstruction method from the heated 3D Gaussian Splatting. Our GBIR directly reconstructs the 3D volume from the Gaussian representation without the need for intermediate steps, such as splatting and view synthesis. 
+		</p>
 
-		 <p>The MORE dataset has the following features:</p>
+
+	
+
+		
+	</div>  
+	
+	<div class="content" id="gbir">
+		<table align=center width=850px>
+			<center><h1>GBIR Framework</h1></center>
+		</table>
+		<br>Below shows the distinctive pipelines of GBIR from previous neural-network based methods</br>
+		<br><img name="stone" src = "./Assets/Pipeline_00.png", width="100%"></img></br>
+		<br></br>
+
+		In the beginning of each iteration, the learnable Gaussians are constrained into 3-sigma range, and then discretized and aligned to the grid. During our high parallel efficient reconstruction, the total volume is reconstructed by the summation of the contribution of Gaussian volumes. The reconstruction process is differentiable and directly supervised by the measurement, thus GBIR can be trained end-to-end.
+		<br>
+		<br><img name="stone" src = "./Assets/gbir2.png", width="100%"></img>
+		
+	
+	</div>
+	<div class="content" id="more">
+		<table align=center width=850px>
+			<center><h1>MORE Dataset</h1></center>
+		</table>
+		<p>The MORE dataset has the following features:</p>
 		(1) Large. There are 135 CT instances and 54 MRI instances in total, with 65,575 CT scans and 7,498 MRI scans.<br>
 		(2) Multi-Organ. CT part contain 15 types of organs and MRI part contain 5 types of organs.<br>
 		(3) Multi-disease.  CT part contain 25 types of diseases and MRI part contain 17 types of diseases.<br>
+		<br>
 		<br>
 
 		  <div style="display: flex;">
 			<img src="Assets/ct_00.png" alt="Image 1" style="width:50%;">
 			<img src="Assets/MRI++_00.png" alt="Image 2" style="width:50%;">
 		  </div>
-		
-		<br>
-		<br>
-		Our GBIR (Gaussian-Based Iterative Reconstruction) framework introduces a novel approach to medical image reconstruction by modeling the 3D volume as a set of learnable Gaussians. Notably, GBIR is a different Gaussian representation and reconstruction method from the heated 3D Gaussian Splatting. Our GBIR directly reconstructs the 3D volume from the Gaussian representation without the need for intermediate steps, such as splatting and view synthesis. 
-		<br>
-		<br><img name="stone" src = "./Assets/gbir2.png", width="100%"></img>
-		
-		In the beginning of each iteration, the learnable Gaussians are constrained into 3-sigma range, and then discretized and aligned to the grid. During our high parallel efficient reconstruction, the total volume is reconstructed by the summation of the contribution of Gaussian volumes. The reconstruction process is differentiable and directly supervised by the measurement, thus GBIR can be trained end-to-end.
-		  
-	</div>       
-	<div class="content" id="more">
-		<table align=center width=850px>
-			<center><h1>MORE Dataset</h1></center>
-		</table>
-		<p>Our dataset is available at <a href='https://huggingface.co/datasets/WSKINGDOM/MORE'> Huggingface. </a> Below we show some samples of MORE dataset:</p>
+		  <br>
+		  <br>
+		Below we show some samples of MORE dataset:</p>
 		<img name="stone" src = "./Assets/sample.png", width="100%"></img>
 	</div>
-	<div class="content" id="gbir">
-		<br>Below shows the distinctive pipelines of GBIR from previous neural-network based methods</br>
-		<br><img name="stone" src = "./Assets/Pipeline_00.png", width="100%"></img></br>
-		<br></br>
-	</div>
+
 
 </body>
 </html>
