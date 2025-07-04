@@ -282,6 +282,92 @@
 	}
 </style>
 
+
+<style>
+.tg {
+  border-collapse: collapse;
+  width: 100%;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 20px auto;
+}
+
+.tg th {
+  background: #b2c4d6 ;
+  color: white;
+  font-weight: 600;
+  padding: 12px 10px;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid #eeeeee;
+}
+
+.tg thead th[colspan="2"],
+.tg thead th:first-child {
+  background: #c6d7e7;
+}
+
+.tg td {
+  padding: 10px;
+  border: 1px solid #ecf0f1;
+  text-align: center;
+  transition: background 0.2s;
+}
+
+.tg tbody tr:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+.tg tbody tr:hover {
+  background-color: #e8f4fc;
+}
+
+.tg .tg-uzvj {
+  font-weight: bold;
+  color: #2980b9;
+  position: relative;
+}
+
+.tg td:first-child + td {
+  font-weight: bold;
+  color: #27ae60; 
+}
+
+.tg td:first-child + td::after {
+  content: '';
+}
+
+.tg td:first-child + td:contains("×") {
+  color: #e74c3c; 
+}
+
+.tg td:first-child + td:contains("×")::after {
+  content: '';
+}
+
+.tg-headers-group {
+  background: #3498db;
+}
+
+.tg td:not(:first-child):not(:nth-child(2)) {
+  text-align: middle;
+  padding-right: 15px;
+  font-family: 'Times New Roman', monospace; 
+}
+
+.tg tbody {
+  border-top: 2px solid #2c3e50;
+}
+
+@media (max-width: 768px) {
+  .tg th,
+  .tg td {
+    padding: 8px 5px;
+    font-size: 13px;
+  }
+}
+</style>
+
 <html>
   <head>
 		<title>MORE</title>
@@ -362,6 +448,7 @@
 				<li><a href="#overview">Overview</a></li>
 				<li><a href="#more">MORE Dataset</a></li>
 				<li><a href="#GIFT">GIFT Model</a></li>
+				<li><a href="#Benchmark">MORE Benchmark</a></li>
 				<!-- <li><a href="#benchmark">Benchmarks</a></li> -->
 			</ol>
 	</div>
@@ -410,11 +497,1858 @@
 		  </video>
 		  <br></br>
 		<p>Currently we provide the code of all models in the supplementary materials. </a></p>
-		<br>Below shows the distinctive pipelines of GIFT from previous neural-network based methods</br>
+		<br>Below is our distinctive pipeline of GIFT from previous neural-network based methods:</br>
 		<!-- <img name="stone" src = "./Assets/Pipeline_00.png", width="100%"></img> -->
 		<br></br>
 		<br><img name="stone" src = "./Assets/GIFT_00.png", width="100%"></img></br>
 	</div>
+
+	<div class="content" id="Benchmark">
+		<table align=center width=850px>
+			<center><h1>MORE Benchmark</h1></center>
+		</table>
+<table class="tg"><thead>
+  <tr>
+    <th class="tg-nrix" colspan="10" style="background-color: #2c3e5e; color: white;"><span style="font-weight:bold">Emphysema Reconstruction</span></th>
+  </tr>
+  <tbody></tbody>
+  <tr>
+    <th class="tg-9wq8" rowspan="2">Method</th>
+    <th class="tg-9wq8" rowspan="2">Pretrain</th>
+    <th class="tg-9wq8" colspan="2">180-view</th>
+    <th class="tg-9wq8" colspan="2">120-view</th>
+    <th class="tg-9wq8" colspan="2">90-view</th>
+    <th class="tg-9wq8" colspan="2">60-view</th>
+  </tr>
+  <tr>
+    <th class="tg-9wq8">PSNR</th>
+    <th class="tg-9wq8">SSIM</th>
+    <th class="tg-9wq8">PSNR</th>
+    <th class="tg-9wq8">SSIM</th>
+    <th class="tg-9wq8">PSNR</th>
+    <th class="tg-9wq8">SSIM</th>
+    <th class="tg-9wq8">PSNR</th>
+    <th class="tg-9wq8">SSIM</th>
+  </tr></thead>
+  <tr>
+    <td class="tg-9wq8">RED-CNN</td>
+    <td class="tg-9wq8">✓</td>
+    <td class="tg-9wq8">29.58</td>
+    <td class="tg-9wq8">0.714</td>
+    <td class="tg-9wq8">28.44</td>
+    <td class="tg-9wq8">0.644</td>
+    <td class="tg-9wq8">27.06</td>
+    <td class="tg-9wq8">0.623</td>
+    <td class="tg-9wq8">27.27</td>
+    <td class="tg-9wq8">0.588</td>
+  </tr>
+  <tr>
+    <td class="tg-9wq8">MCG</td>
+    <td class="tg-9wq8">✓</td>
+    <td class="tg-9wq8">32.72</td>
+    <td class="tg-9wq8">0.820</td>
+    <td class="tg-9wq8">32.84</td>
+    <td class="tg-9wq8">0.821</td>
+    <td class="tg-9wq8">34.47</td>
+    <td class="tg-9wq8">0.843</td>
+    <td class="tg-9wq8">32.90</td>
+    <td class="tg-9wq8">0.820</td>
+  </tr>
+  <tr>
+    <td class="tg-9wq8">DiffusionMBIR</td>
+    <td class="tg-9wq8">✓</td>
+    <td class="tg-9wq8">32.58</td>
+    <td class="tg-9wq8">0.933</td>
+    <td class="tg-9wq8">32.64</td>
+    <td class="tg-9wq8">0.936</td>
+    <td class="tg-9wq8">32.45</td>
+    <td class="tg-9wq8">0.932</td>
+    <td class="tg-9wq8">32.24</td>
+    <td class="tg-9wq8">0.932</td>
+  </tr>
+  <tr>
+    <td class="tg-9wq8">SWORD</td>
+    <td class="tg-9wq8">✓</td>
+    <td class="tg-9wq8">35.38</td>
+    <td class="tg-9wq8">0.879</td>
+    <td class="tg-9wq8">34.52</td>
+    <td class="tg-9wq8">0.864</td>
+    <td class="tg-9wq8">33.78</td>
+    <td class="tg-9wq8">0.849</td>
+    <td class="tg-9wq8">32.30</td>
+    <td class="tg-9wq8">0.827</td>
+  </tr>
+  <tr>
+    <td class="tg-9wq8">FBP</td>
+    <td class="tg-9wq8">×</td>
+    <td class="tg-9wq8">18.55</td>
+    <td class="tg-9wq8">0.365</td>
+    <td class="tg-9wq8">16.29</td>
+    <td class="tg-9wq8">0.293</td>
+    <td class="tg-9wq8">14.77</td>
+    <td class="tg-9wq8">0.248</td>
+    <td class="tg-9wq8">12.03</td>
+    <td class="tg-9wq8">0.193</td>
+  </tr>
+  <tr>
+    <td class="tg-9wq8">NeRP</td>
+    <td class="tg-9wq8">×</td>
+    <td class="tg-9wq8">25.41</td>
+    <td class="tg-9wq8">0.744</td>
+    <td class="tg-9wq8">25.21</td>
+    <td class="tg-9wq8">0.735</td>
+    <td class="tg-9wq8">25.40</td>
+    <td class="tg-9wq8">0.745</td>
+    <td class="tg-9wq8">25.39</td>
+    <td class="tg-9wq8">0.745</td>
+  </tr>
+  <tr>
+    <td class="tg-9wq8">R<sup>2</sup>-Gaussian</td>
+    <td class="tg-9wq8">×</td>
+    <td class="tg-9wq8">38.88</td>
+    <td class="tg-9wq8">0.943</td>
+    <td class="tg-9wq8">38.52</td>
+    <td class="tg-9wq8">0.939</td>
+    <td class="tg-9wq8">37.95</td>
+    <td class="tg-9wq8">0.932</td>
+    <td class="tg-9wq8">37.69</td>
+    <td class="tg-9wq8">0.928</td>
+  </tr>
+  <tr>
+    <td class="tg-9wq8">GIFT</td>
+    <td class="tg-9wq8">×</td>
+    <td class="tg-uzvj">39.47</td>
+    <td class="tg-uzvj">0.950</td>
+    <td class="tg-uzvj">39.04</td>
+    <td class="tg-uzvj">0.946</td>
+    <td class="tg-uzvj">38.42</td>
+    <td class="tg-uzvj">0.941</td>
+    <td class="tg-uzvj">38.04</td>
+    <td class="tg-uzvj">0.937</td>
+  </tr>
+</table>
+
+<table class="tg"><thead>
+  <tr>
+    <th class="tg-nrix" colspan="10" style="background-color: #2c3e5e; color: white;"><span style="font-weight:bold"> Ureteral Calculi Reconstruction</span></th>
+  </tr>
+  <tbody></tbody>
+  <tr>
+    <th class="tg-9wq8" rowspan="2">Method</th>
+    <th class="tg-9wq8" rowspan="2">Pretrain</th>
+    <th class="tg-9wq8" colspan="2">180-view</th>
+    <th class="tg-9wq8" colspan="2">120-view</th>
+    <th class="tg-9wq8" colspan="2">90-view</th>
+    <th class="tg-9wq8" colspan="2">60-view</th>
+  </tr>
+  <tr>
+    <th class="tg-9wq8">PSNR</th>
+    <th class="tg-9wq8">SSIM</th>
+    <th class="tg-9wq8">PSNR</th>
+    <th class="tg-9wq8">SSIM</th>
+    <th class="tg-9wq8">PSNR</th>
+    <th class="tg-9wq8">SSIM</th>
+    <th class="tg-9wq8">PSNR</th>
+    <th class="tg-9wq8">SSIM</th>
+  </tr></thead>
+   <tr>
+    <td class="tg-9wq8">RED-CNN</td>
+    <td class="tg-9wq8">✓</td>
+    <td class="tg-9wq8">37.04</td>
+    <td class="tg-9wq8">0.901</td>
+    <td class="tg-9wq8">35.63</td>
+    <td class="tg-9wq8">0.913</td>
+    <td class="tg-9wq8">32.07</td>
+    <td class="tg-9wq8">0.759</td>
+    <td class="tg-9wq8">31.46</td>
+    <td class="tg-9wq8">0.844</td>
+  </tr>
+  <tr>
+    <td class="tg-9wq8">MCG</td>
+    <td class="tg-9wq8">✓</td>
+    <td class="tg-9wq8">37.94</td>
+    <td class="tg-9wq8">0.901</td>
+    <td class="tg-9wq8">37.99</td>
+    <td class="tg-9wq8">0.901</td>
+    <td class="tg-9wq8">38.04</td>
+    <td class="tg-9wq8">0.902</td>
+    <td class="tg-9wq8">38.05</td>
+    <td class="tg-9wq8">0.902</td>
+  </tr>
+  <tr>
+    <td class="tg-9wq8">DiffusionMBIR</td>
+    <td class="tg-9wq8">✓</td>
+    <td class="tg-9wq8">38.37</td>
+    <td class="tg-9wq8">0.968</td>
+    <td class="tg-9wq8">38.24</td>
+    <td class="tg-9wq8">0.967</td>
+    <td class="tg-9wq8">38.13</td>
+    <td class="tg-9wq8">0.967</td>
+    <td class="tg-9wq8">38.90</td>
+    <td class="tg-9wq8">0.966</td>
+  </tr>
+  <tr>
+    <td class="tg-9wq8">SWORD</td>
+    <td class="tg-9wq8">✓</td>
+    <td class="tg-9wq8">42.35</td>
+    <td class="tg-9wq8">0.973</td>
+    <td class="tg-9wq8">40.93</td>
+    <td class="tg-9wq8">0.967</td>
+    <td class="tg-9wq8">39.42</td>
+    <td class="tg-9wq8">0.960</td>
+    <td class="tg-9wq8">37.63</td>
+    <td class="tg-9wq8">0.947</td>
+  </tr>
+  <tr>
+    <td class="tg-9wq8">FBP</td>
+    <td class="tg-9wq8">×</td>
+    <td class="tg-9wq8">23.09</td>
+    <td class="tg-9wq8">0.515</td>
+    <td class="tg-9wq8">19.42</td>
+    <td class="tg-9wq8">0.462</td>
+    <td class="tg-9wq8">16.89</td>
+    <td class="tg-9wq8">0.416</td>
+    <td class="tg-9wq8">14.02</td>
+    <td class="tg-9wq8">0.355</td>
+  </tr>
+  <tr>
+    <td class="tg-9wq8">NeRP</td>
+    <td class="tg-9wq8">×</td>
+    <td class="tg-9wq8">26.91</td>
+    <td class="tg-9wq8">0.801</td>
+    <td class="tg-9wq8">26.68</td>
+    <td class="tg-9wq8">0.789</td>
+    <td class="tg-9wq8">26.95</td>
+    <td class="tg-9wq8">0.802</td>
+    <td class="tg-9wq8">26.66</td>
+    <td class="tg-9wq8">0.785</td>
+  </tr>
+  <tr>
+    <td class="tg-9wq8">R<sup>2</sup>-Gaussian</td>
+    <td class="tg-9wq8">×</td>
+    <td class="tg-9wq8">41.37</td>
+    <td class="tg-9wq8">0.971</td>
+    <td class="tg-9wq8">41.09</td>
+    <td class="tg-9wq8">0.966</td>
+    <td class="tg-9wq8">40.05</td>
+    <td class="tg-9wq8">0.962</td>
+    <td class="tg-9wq8">39.45</td>
+    <td class="tg-9wq8">0.956</td>
+  </tr>
+  <tr>
+    <td class="tg-9wq8">GIFT</td>
+    <td class="tg-9wq8">×</td>
+    <td class="tg-uzvj">43.43</td>
+    <td class="tg-uzvj">0.982</td>
+    <td class="tg-uzvj">42.24</td>
+    <td class="tg-uzvj">0.980</td>
+    <td class="tg-uzvj">40.82</td>
+    <td class="tg-uzvj">0.976</td>
+    <td class="tg-uzvj">40.11</td>
+    <td class="tg-uzvj">0.975</td>
+  </tr>
+</table>
+
+<table class="tg"><thead>
+  <tr>
+    <th class="tg-nrix" colspan="10" style="background-color: #2c3e5e; color: white;"><span style="font-weight:bold"> Rib Fracture Reconstruction</span></th>
+  </tr>
+  <tbody></tbody>
+  <tr>
+    <th class="tg-9wq8" rowspan="2">Method</th>
+    <th class="tg-9wq8" rowspan="2">Pretrain</th>
+    <th class="tg-9wq8" colspan="2">180-view</th>
+    <th class="tg-9wq8" colspan="2">120-view</th>
+    <th class="tg-9wq8" colspan="2">90-view</th>
+    <th class="tg-9wq8" colspan="2">60-view</th>
+  </tr>
+  <tr>
+    <th class="tg-9wq8">PSNR</th>
+    <th class="tg-9wq8">SSIM</th>
+    <th class="tg-9wq8">PSNR</th>
+    <th class="tg-9wq8">SSIM</th>
+    <th class="tg-9wq8">PSNR</th>
+    <th class="tg-9wq8">SSIM</th>
+    <th class="tg-9wq8">PSNR</th>
+    <th class="tg-9wq8">SSIM</th>
+  </tr></thead>
+  <tr>
+    <td class="tg-9wq8">RED-CNN</td>
+    <td class="tg-9wq8">✓</td>
+    <td class="tg-9wq8">29.61</td>
+    <td class="tg-9wq8">0.707</td>
+    <td class="tg-9wq8">28.97</td>
+    <td class="tg-9wq8">0.682</td>
+    <td class="tg-9wq8">27.94</td>
+    <td class="tg-9wq8">0.658</td>
+    <td class="tg-9wq8">27.97</td>
+    <td class="tg-9wq8">0.585</td>
+  </tr>
+  <tr>
+    <td class="tg-9wq8">MCG</td>
+    <td class="tg-9wq8">✓</td>
+    <td class="tg-9wq8">34.81</td>
+    <td class="tg-9wq8">0.851</td>
+    <td class="tg-9wq8">34.94</td>
+    <td class="tg-9wq8">0.852</td>
+    <td class="tg-9wq8">34.96</td>
+    <td class="tg-9wq8">0.853</td>
+    <td class="tg-9wq8">35.07</td>
+    <td class="tg-9wq8">0.854</td>
+  </tr>
+  <tr>
+    <td class="tg-9wq8">DiffusionMBIR</td>
+    <td class="tg-9wq8">✓</td>
+    <td class="tg-9wq8">34.64</td>
+    <td class="tg-9wq8">0.950</td>
+    <td class="tg-9wq8">34.64</td>
+    <td class="tg-9wq8">0.952</td>
+    <td class="tg-9wq8">34.54</td>
+    <td class="tg-9wq8">0,951</td>
+    <td class="tg-9wq8">34.35</td>
+    <td class="tg-uzvj">0.950</td>
+  </tr>
+  <tr>
+    <td class="tg-9wq8">SWORD</td>
+    <td class="tg-9wq8">✓</td>
+    <td class="tg-9wq8">36.51</td>
+    <td class="tg-9wq8">0.877</td>
+    <td class="tg-9wq8">35.90</td>
+    <td class="tg-9wq8">0.864</td>
+    <td class="tg-9wq8">35.53</td>
+    <td class="tg-9wq8">0.855</td>
+    <td class="tg-9wq8">34.76</td>
+    <td class="tg-9wq8">0.838</td>
+  </tr>
+  <tr>
+    <td class="tg-9wq8">FBP</td>
+    <td class="tg-9wq8">×</td>
+    <td class="tg-9wq8">19.33</td>
+    <td class="tg-9wq8">0.388</td>
+    <td class="tg-9wq8">16.64</td>
+    <td class="tg-9wq8">0.324</td>
+    <td class="tg-9wq8">14.76</td>
+    <td class="tg-9wq8">0.280</td>
+    <td class="tg-9wq8">12.69</td>
+    <td class="tg-9wq8">0.230</td>
+  </tr>
+  <tr>
+    <td class="tg-9wq8">NeRP</td>
+    <td class="tg-9wq8">×</td>
+    <td class="tg-9wq8">25.77</td>
+    <td class="tg-9wq8">0.778</td>
+    <td class="tg-9wq8">25.10</td>
+    <td class="tg-9wq8">0.744</td>
+    <td class="tg-9wq8">25.63</td>
+    <td class="tg-9wq8">0.771</td>
+    <td class="tg-9wq8">25.60</td>
+    <td class="tg-9wq8">0.769</td>
+  </tr>
+  <tr>
+    <td class="tg-9wq8">R<sup>2</sup>-Gaussian</td>
+    <td class="tg-9wq8">×</td>
+    <td class="tg-9wq8">40.72</td>
+    <td class="tg-9wq8">0.960</td>
+    <td class="tg-9wq8">39.48</td>
+    <td class="tg-9wq8">0.952</td>
+    <td class="tg-9wq8">38.65</td>
+    <td class="tg-9wq8">0.948</td>
+    <td class="tg-9wq8">37.68</td>
+    <td class="tg-9wq8">0.943</td>
+  </tr>
+  <tr>
+    <td class="tg-9wq8">GIFT</td>
+    <td class="tg-9wq8">×</td>
+    <td class="tg-uzvj">42.43</td>
+    <td class="tg-uzvj">0.972</td>
+    <td class="tg-uzvj">41.05</td>
+    <td class="tg-uzvj">0.962</td>
+    <td class="tg-uzvj">40.01</td>
+    <td class="tg-uzvj">0.953</td>
+    <td class="tg-uzvj">39.43</td>
+    <td class="tg-9wq8">0.948</td>
+  </tr>
+</table>
+
+
+<table class="tg"><thead>
+  <tr>
+    <th class="tg-nrix" colspan="10" style="background-color: #2c3e5e; color: white;"><span style="font-weight:bold"> Appendicitis Reconstruction</span></th>
+  </tr>
+  <tbody></tbody>
+  <tr>
+    <th class="tg-9wq8" rowspan="2">Method</th>
+    <th class="tg-9wq8" rowspan="2">Pretrain</th>
+    <th class="tg-9wq8" colspan="2">180-view</th>
+    <th class="tg-9wq8" colspan="2">120-view</th>
+    <th class="tg-9wq8" colspan="2">90-view</th>
+    <th class="tg-9wq8" colspan="2">60-view</th>
+  </tr>
+  <tr>
+    <th class="tg-9wq8">PSNR</th>
+    <th class="tg-9wq8">SSIM</th>
+    <th class="tg-9wq8">PSNR</th>
+    <th class="tg-9wq8">SSIM</th>
+    <th class="tg-9wq8">PSNR</th>
+    <th class="tg-9wq8">SSIM</th>
+    <th class="tg-9wq8">PSNR</th>
+    <th class="tg-9wq8">SSIM</th>
+  </tr></thead>
+   <tr>
+    <td class="tg-9wq8">RED-CNN</td>
+    <td class="tg-9wq8">✓</td>
+    <td class="tg-9wq8">36.96</td>
+    <td class="tg-9wq8">0.904</td>
+    <td class="tg-9wq8">35.54</td>
+    <td class="tg-9wq8">0.906</td>
+    <td class="tg-9wq8">31.30</td>
+    <td class="tg-9wq8">0.838</td>
+    <td class="tg-9wq8">32.59</td>
+    <td class="tg-9wq8">0.854</td>
+  </tr>
+  <tr>
+    <td class="tg-9wq8">MCG</td>
+    <td class="tg-9wq8">✓</td>
+    <td class="tg-9wq8">38.76</td>
+    <td class="tg-9wq8">0.908</td>
+    <td class="tg-9wq8">38.96</td>
+    <td class="tg-9wq8">0.909</td>
+    <td class="tg-9wq8">38.97</td>
+    <td class="tg-9wq8">0.897</td>
+    <td class="tg-9wq8">38.36</td>
+    <td class="tg-9wq8">0.899</td>
+  </tr>
+  <tr>
+    <td class="tg-9wq8">DiffusionMBIR</td>
+    <td class="tg-9wq8">✓</td>
+    <td class="tg-9wq8">38.34</td>
+    <td class="tg-9wq8">0.960</td>
+    <td class="tg-9wq8">38.28</td>
+    <td class="tg-9wq8">0.959</td>
+    <td class="tg-9wq8">38.24</td>
+    <td class="tg-9wq8">0.966</td>
+    <td class="tg-9wq8">38.00</td>
+    <td class="tg-9wq8">0.967</td>
+  </tr>
+  <tr>
+    <td class="tg-9wq8">SWORD</td>
+    <td class="tg-9wq8">✓</td>
+    <td class="tg-uzvj">44.18</td>
+    <td class="tg-9wq8">0.976</td>
+    <td class="tg-uzvj">42.62</td>
+    <td class="tg-9wq8">0.971</td>
+    <td class="tg-9wq8">40.85</td>
+    <td class="tg-9wq8">0.964</td>
+    <td class="tg-9wq8">37.79</td>
+    <td class="tg-9wq8">0.949</td>
+  </tr>
+  <tr>
+    <td class="tg-9wq8">FBP</td>
+    <td class="tg-9wq8">×</td>
+    <td class="tg-9wq8">23.37</td>
+    <td class="tg-9wq8">0.516</td>
+    <td class="tg-9wq8">19.63</td>
+    <td class="tg-9wq8">0.462</td>
+    <td class="tg-9wq8">18.17</td>
+    <td class="tg-9wq8">0.427</td>
+    <td class="tg-9wq8">14.67</td>
+    <td class="tg-9wq8">0.366</td>
+  </tr>
+  <tr>
+    <td class="tg-9wq8">NeRP</td>
+    <td class="tg-9wq8">×</td>
+    <td class="tg-9wq8">27.15</td>
+    <td class="tg-9wq8">0.821</td>
+    <td class="tg-9wq8">27.25</td>
+    <td class="tg-9wq8">0.817</td>
+    <td class="tg-9wq8">27.38</td>
+    <td class="tg-9wq8">0.819</td>
+    <td class="tg-9wq8">27.28</td>
+    <td class="tg-9wq8">0.817</td>
+  </tr>
+  <tr>
+    <td class="tg-9wq8">R<sup>2</sup>-Gaussian</td>
+    <td class="tg-9wq8">×</td>
+    <td class="tg-9wq8">41.47</td>
+    <td class="tg-9wq8">0.964</td>
+    <td class="tg-9wq8">40.78</td>
+    <td class="tg-9wq8">0.959</td>
+    <td class="tg-9wq8">40.16</td>
+    <td class="tg-9wq8">0.954</td>
+    <td class="tg-9wq8">39.79</td>
+    <td class="tg-9wq8">0.948</td>
+  </tr>
+  <tr>
+    <td class="tg-9wq8">GIFT</td>
+    <td class="tg-9wq8">×</td>
+    <td class="tg-9wq8">42.03</td>
+    <td class="tg-uzvj">0.981</td>
+    <td class="tg-9wq8">41.63</td>
+    <td class="tg-uzvj">0.981</td>
+    <td class="tg-uzvj">41.15</td>
+    <td class="tg-uzvj">0.979</td>
+    <td class="tg-uzvj">40.22</td>
+    <td class="tg-uzvj">0.976</td>
+  </tr>
+</table>
+
+
+<table class="tg"><thead>
+  <tr>
+    <th class="tg-nrix" colspan="10" style="background-color: #2c3e5e; color: white;"><span style="font-weight:bold"> Pneumonia Reconstruction</span></th>
+  </tr>
+  <tbody></tbody>
+  <tr>
+    <th class="tg-9wq8" rowspan="2">Method</th>
+    <th class="tg-9wq8" rowspan="2">Pretrain</th>
+    <th class="tg-9wq8" colspan="2">180-view</th>
+    <th class="tg-9wq8" colspan="2">120-view</th>
+    <th class="tg-9wq8" colspan="2">90-view</th>
+    <th class="tg-9wq8" colspan="2">60-view</th>
+  </tr>
+  <tr>
+    <th class="tg-9wq8">PSNR</th>
+    <th class="tg-9wq8">SSIM</th>
+    <th class="tg-9wq8">PSNR</th>
+    <th class="tg-9wq8">SSIM</th>
+    <th class="tg-9wq8">PSNR</th>
+    <th class="tg-9wq8">SSIM</th>
+    <th class="tg-9wq8">PSNR</th>
+    <th class="tg-9wq8">SSIM</th>
+  </tr></thead>
+
+     <tr>
+    <td class="tg-9wq8">RED-CNN</td>
+    <td class="tg-9wq8">✓</td>
+    <td class="tg-9wq8">31.78</td>
+    <td class="tg-9wq8">0.733</td>
+    <td class="tg-9wq8">30.43</td>
+    <td class="tg-9wq8">0.672</td>
+    <td class="tg-9wq8">29.22</td>
+    <td class="tg-9wq8">0.680</td>
+    <td class="tg-9wq8">27.82</td>
+    <td class="tg-9wq8">0.578</td>
+  </tr>
+  <tr>
+    <td class="tg-9wq8">MCG</td>
+    <td class="tg-9wq8">✓</td>
+    <td class="tg-9wq8">32.87</td>
+    <td class="tg-9wq8">0.810</td>
+    <td class="tg-9wq8">33.05</td>
+    <td class="tg-9wq8">0.813</td>
+    <td class="tg-9wq8">33.19</td>
+    <td class="tg-9wq8">0.814</td>
+    <td class="tg-9wq8">33.33</td>
+    <td class="tg-9wq8">0.815</td>
+  </tr>
+  <tr>
+    <td class="tg-9wq8">DiffusionMBIR</td>
+    <td class="tg-9wq8">✓</td>
+    <td class="tg-9wq8">33.34</td>
+    <td class="tg-9wq8">0.954</td>
+    <td class="tg-9wq8">33.26</td>
+    <td class="tg-9wq8">0.953</td>
+    <td class="tg-9wq8">33.10</td>
+    <td class="tg-9wq8">0.952</td>
+    <td class="tg-9wq8">32.86</td>
+    <td class="tg-uzvj">0.951</td>
+  </tr>
+  <tr>
+    <td class="tg-9wq8">SWORD</td>
+    <td class="tg-9wq8">✓</td>
+    <td class="tg-9wq8">39.69</td>
+    <td class="tg-9wq8">0.901</td>
+    <td class="tg-9wq8">38.75</td>
+    <td class="tg-9wq8">0.887</td>
+    <td class="tg-9wq8">38.02</td>
+    <td class="tg-9wq8">0.875</td>
+    <td class="tg-9wq8">36.40</td>
+    <td class="tg-9wq8">0.850</td>
+  </tr>
+  <tr>
+    <td class="tg-9wq8">FBP</td>
+    <td class="tg-9wq8">×</td>
+    <td class="tg-9wq8">17.57</td>
+    <td class="tg-9wq8">0.323</td>
+    <td class="tg-9wq8">15.73</td>
+    <td class="tg-9wq8">0.264</td>
+    <td class="tg-9wq8">14.66</td>
+    <td class="tg-9wq8">0.229</td>
+    <td class="tg-9wq8">12.73</td>
+    <td class="tg-9wq8">0.182</td>
+  </tr>
+  <tr>
+    <td class="tg-9wq8">NeRP</td>
+    <td class="tg-9wq8">×</td>
+    <td class="tg-9wq8">25.52</td>
+    <td class="tg-9wq8">0.694</td>
+    <td class="tg-9wq8">26.16</td>
+    <td class="tg-9wq8">0.733</td>
+    <td class="tg-9wq8">25.93</td>
+    <td class="tg-9wq8">0.722</td>
+    <td class="tg-9wq8">25.64</td>
+    <td class="tg-9wq8">0.701</td>
+  </tr>
+  <tr>
+    <td class="tg-9wq8">R<sup>2</sup>-Gaussian</td>
+    <td class="tg-9wq8">×</td>
+    <td class="tg-9wq8">39.73</td>
+    <td class="tg-9wq8">0.953</td>
+    <td class="tg-9wq8">38.96</td>
+    <td class="tg-9wq8">0.949</td>
+    <td class="tg-9wq8">38.40</td>
+    <td class="tg-9wq8">0.944</td>
+    <td class="tg-9wq8">37.92</td>
+    <td class="tg-9wq8">0.938</td>
+  </tr>
+  <tr>
+    <td class="tg-9wq8">GIFT</td>
+    <td class="tg-9wq8">×</td>
+    <td class="tg-uzvj">41.77</td>
+    <td class="tg-uzvj">0.967</td>
+    <td class="tg-uzvj">40.96</td>
+    <td class="tg-uzvj">0.962</td>
+    <td class="tg-uzvj">40.31</td>
+    <td class="tg-uzvj">0.956</td>
+    <td class="tg-uzvj">39.11</td>
+    <td class="tg-9wq8">0.946</td>
+  </tr>
+</table>
+
+<table class="tg"><thead>
+  <tr>
+    <th class="tg-nrix" colspan="10" style="background-color: #2c3e5e; color: white;"><span style="font-weight:bold"> Cerebral Hemorrhage Reconstruction</span></th>
+  </tr>
+  <tbody></tbody>
+  <tr>
+    <th class="tg-9wq8" rowspan="2">Method</th>
+    <th class="tg-9wq8" rowspan="2">Pretrain</th>
+    <th class="tg-9wq8" colspan="2">180-view</th>
+    <th class="tg-9wq8" colspan="2">120-view</th>
+    <th class="tg-9wq8" colspan="2">90-view</th>
+    <th class="tg-9wq8" colspan="2">60-view</th>
+  </tr>
+  <tr>
+    <th class="tg-9wq8">PSNR</th>
+    <th class="tg-9wq8">SSIM</th>
+    <th class="tg-9wq8">PSNR</th>
+    <th class="tg-9wq8">SSIM</th>
+    <th class="tg-9wq8">PSNR</th>
+    <th class="tg-9wq8">SSIM</th>
+    <th class="tg-9wq8">PSNR</th>
+    <th class="tg-9wq8">SSIM</th>
+  </tr></thead>
+
+<tr>
+    <td class="tg-9wq8">RED-CNN</td>
+    <td class="tg-9wq8">✓</td>
+    <td class="tg-9wq8">35.47</td>
+    <td class="tg-9wq8">0.895</td>
+    <td class="tg-9wq8">33.29</td>
+    <td class="tg-9wq8">0.864</td>
+    <td class="tg-9wq8">30.46</td>
+    <td class="tg-9wq8">0.786</td>
+    <td class="tg-9wq8">29.26</td>
+    <td class="tg-9wq8">0.766</td>
+  </tr>
+  <tr>
+    <td class="tg-9wq8">MCG</td>
+    <td class="tg-9wq8">✓</td>
+    <td class="tg-9wq8">39.14</td>
+    <td class="tg-9wq8">0.898</td>
+    <td class="tg-9wq8">39.23</td>
+    <td class="tg-9wq8">0.899</td>
+    <td class="tg-9wq8">39.32</td>
+    <td class="tg-9wq8">0.899</td>
+    <td class="tg-9wq8">39.31</td>
+    <td class="tg-9wq8">0.899</td>
+  </tr>
+  <tr>
+    <td class="tg-9wq8">DiffusionMBIR</td>
+    <td class="tg-9wq8">✓</td>
+    <td class="tg-9wq8">39.04</td>
+    <td class="tg-9wq8">0.969</td>
+    <td class="tg-9wq8">39.29</td>
+    <td class="tg-9wq8">0.973</td>
+    <td class="tg-9wq8">39.05</td>
+    <td class="tg-9wq8">0.971</td>
+    <td class="tg-9wq8">38.53</td>
+    <td class="tg-9wq8">0.969</td>
+  </tr>
+  <tr>
+    <td class="tg-9wq8">SWORD</td>
+    <td class="tg-9wq8">✓</td>
+    <td class="tg-9wq8">34.90</td>
+    <td class="tg-9wq8">0.742</td>
+    <td class="tg-9wq8">33.50</td>
+    <td class="tg-9wq8">0.740</td>
+    <td class="tg-9wq8">31.86</td>
+    <td class="tg-9wq8">0.737</td>
+    <td class="tg-9wq8">29.57</td>
+    <td class="tg-9wq8">0.732</td>
+  </tr>
+  <tr>
+    <td class="tg-9wq8">FBP</td>
+    <td class="tg-9wq8">×</td>
+    <td class="tg-9wq8">24.13</td>
+    <td class="tg-9wq8">0.526</td>
+    <td class="tg-9wq8">21.54</td>
+    <td class="tg-9wq8">0.490</td>
+    <td class="tg-9wq8">19.70</td>
+    <td class="tg-9wq8">0.460</td>
+    <td class="tg-9wq8">17.52</td>
+    <td class="tg-9wq8">0.413</td>
+  </tr>
+  <tr>
+    <td class="tg-9wq8">NeRP</td>
+    <td class="tg-9wq8">×</td>
+    <td class="tg-9wq8">25.38</td>
+    <td class="tg-9wq8">0.789</td>
+    <td class="tg-9wq8">25.98</td>
+    <td class="tg-9wq8">0.804</td>
+    <td class="tg-9wq8">25.02</td>
+    <td class="tg-9wq8">0.760</td>
+    <td class="tg-9wq8">24.23</td>
+    <td class="tg-9wq8">0.764</td>
+  </tr>
+  <tr>
+    <td class="tg-9wq8">R<sup>2</sup>-Gaussian</td>
+    <td class="tg-9wq8">×</td>
+    <td class="tg-9wq8">40.97</td>
+    <td class="tg-9wq8">0.968</td>
+    <td class="tg-9wq8">40.54</td>
+    <td class="tg-9wq8">0.964</td>
+    <td class="tg-9wq8">39.88</td>
+    <td class="tg-9wq8">0.960</td>
+    <td class="tg-9wq8">38.79</td>
+    <td class="tg-9wq8">0.955</td>
+  </tr>
+  <tr>
+    <td class="tg-9wq8">GIFT</td>
+    <td class="tg-9wq8">×</td>
+    <td class="tg-uzvj">43.71</td>
+    <td class="tg-uzvj">0.984</td>
+    <td class="tg-uzvj">42.94</td>
+    <td class="tg-uzvj">0.981</td>
+    <td class="tg-uzvj">41.68</td>
+    <td class="tg-uzvj">0.978</td>
+    <td class="tg-uzvj">40.56</td>
+    <td class="tg-uzvj">0.974</td>
+  </tr>
+</table>
+
+
+
+
+<table class="tg"><thead>
+  <tr>
+    <th class="tg-nrix" colspan="10" style="background-color: #2c3e5e; color: white;"><span style="font-weight:bold"> Kidney Stones Reconstruction</span></th>
+  </tr>
+  <tbody></tbody>
+  <tr>
+    <th class="tg-9wq8" rowspan="2">Method</th>
+    <th class="tg-9wq8" rowspan="2">Pretrain</th>
+    <th class="tg-9wq8" colspan="2">180-view</th>
+    <th class="tg-9wq8" colspan="2">120-view</th>
+    <th class="tg-9wq8" colspan="2">90-view</th>
+    <th class="tg-9wq8" colspan="2">60-view</th>
+  </tr>
+  <tr>
+    <th class="tg-9wq8">PSNR</th>
+    <th class="tg-9wq8">SSIM</th>
+    <th class="tg-9wq8">PSNR</th>
+    <th class="tg-9wq8">SSIM</th>
+    <th class="tg-9wq8">PSNR</th>
+    <th class="tg-9wq8">SSIM</th>
+    <th class="tg-9wq8">PSNR</th>
+    <th class="tg-9wq8">SSIM</th>
+  </tr></thead>
+
+     <tr>
+    <td class="tg-9wq8">RED-CNN</td>
+    <td class="tg-9wq8">✓</td>
+    <td class="tg-9wq8">36.65</td>
+    <td class="tg-9wq8">0.882</td>
+    <td class="tg-9wq8">34.70</td>
+    <td class="tg-9wq8">0.909</td>
+    <td class="tg-9wq8">31.98</td>
+    <td class="tg-9wq8">0.802</td>
+    <td class="tg-9wq8">30.89</td>
+    <td class="tg-9wq8">0.798</td>
+  </tr>
+  <tr>
+    <td class="tg-9wq8">MCG</td>
+    <td class="tg-9wq8">✓</td>
+    <td class="tg-9wq8">38.16</td>
+    <td class="tg-9wq8">0.909</td>
+    <td class="tg-9wq8">38.43</td>
+    <td class="tg-9wq8">0.911</td>
+    <td class="tg-9wq8">38.49</td>
+    <td class="tg-9wq8">0.912</td>
+    <td class="tg-9wq8">38.67</td>
+    <td class="tg-9wq8">0.913</td>
+  </tr>
+  <tr>
+    <td class="tg-9wq8">DiffusionMBIR</td>
+    <td class="tg-9wq8">✓</td>
+    <td class="tg-9wq8">28.84</td>
+    <td class="tg-9wq8">0.964</td>
+    <td class="tg-9wq8">38.92</td>
+    <td class="tg-9wq8">0.966</td>
+    <td class="tg-9wq8">38.79</td>
+    <td class="tg-9wq8">0.964</td>
+    <td class="tg-9wq8">38.54</td>
+    <td class="tg-9wq8">0.964</td>
+  </tr>
+  <tr>
+    <td class="tg-9wq8">SWORD</td>
+    <td class="tg-9wq8">✓</td>
+    <td class="tg-9wq8">43.58</td>
+    <td class="tg-9wq8">0.980</td>
+    <td class="tg-9wq8">42.27</td>
+    <td class="tg-9wq8">0.976</td>
+    <td class="tg-9wq8">40.95</td>
+    <td class="tg-9wq8">0.971</td>
+    <td class="tg-9wq8">39.51</td>
+    <td class="tg-9wq8">0.961</td>
+  </tr>
+  <tr>
+    <td class="tg-9wq8">FBP</td>
+    <td class="tg-9wq8">×</td>
+    <td class="tg-9wq8">22.88</td>
+    <td class="tg-9wq8">0.483</td>
+    <td class="tg-9wq8">19.39</td>
+    <td class="tg-9wq8">0.439</td>
+    <td class="tg-9wq8">16.27</td>
+    <td class="tg-9wq8">0.398</td>
+    <td class="tg-9wq8">13.52</td>
+    <td class="tg-9wq8">0.341</td>
+  </tr>
+  <tr>
+    <td class="tg-9wq8">NeRP</td>
+    <td class="tg-9wq8">×</td>
+    <td class="tg-9wq8">26.17</td>
+    <td class="tg-9wq8">0.767</td>
+    <td class="tg-9wq8">26.25</td>
+    <td class="tg-9wq8">0.773</td>
+    <td class="tg-9wq8">26.11</td>
+    <td class="tg-9wq8">0.772</td>
+    <td class="tg-9wq8">26.16</td>
+    <td class="tg-9wq8">0.776</td>
+  </tr>
+  <tr>
+    <td class="tg-9wq8">R<sup>2</sup>-Gaussian</td>
+    <td class="tg-9wq8">×</td>
+    <td class="tg-9wq8">44.00</td>
+    <td class="tg-9wq8">0.983</td>
+    <td class="tg-9wq8">42.94</td>
+    <td class="tg-9wq8">0.978</td>
+    <td class="tg-9wq8">41.97</td>
+    <td class="tg-9wq8">0.975</td>
+    <td class="tg-9wq8">40.26</td>
+    <td class="tg-9wq8">0.969</td>
+  </tr>
+  <tr>
+    <td class="tg-9wq8">GIFT</td>
+    <td class="tg-9wq8">×</td>
+    <td class="tg-uzvj">44.37</td>
+    <td class="tg-uzvj">0.988</td>
+    <td class="tg-uzvj">43.45</td>
+    <td class="tg-uzvj">0.987</td>
+    <td class="tg-uzvj">42.99</td>
+    <td class="tg-uzvj">0.986</td>
+    <td class="tg-uzvj">41.20</td>
+    <td class="tg-uzvj">0.982</td>
+  </tr>
+</table>
+
+<table class="tg"><thead>
+  <tr>
+    <th class="tg-nrix" colspan="10" style="background-color: #2c3e5e; color: white;"><span style="font-weight:bold"> Fatty Liver Reconstruction</span></th>
+  </tr>
+  <tbody></tbody>
+  <tr>
+    <th class="tg-9wq8" rowspan="2">Method</th>
+    <th class="tg-9wq8" rowspan="2">Pretrain</th>
+    <th class="tg-9wq8" colspan="2">180-view</th>
+    <th class="tg-9wq8" colspan="2">120-view</th>
+    <th class="tg-9wq8" colspan="2">90-view</th>
+    <th class="tg-9wq8" colspan="2">60-view</th>
+  </tr>
+  <tr>
+    <th class="tg-9wq8">PSNR</th>
+    <th class="tg-9wq8">SSIM</th>
+    <th class="tg-9wq8">PSNR</th>
+    <th class="tg-9wq8">SSIM</th>
+    <th class="tg-9wq8">PSNR</th>
+    <th class="tg-9wq8">SSIM</th>
+    <th class="tg-9wq8">PSNR</th>
+    <th class="tg-9wq8">SSIM</th>
+  </tr></thead>
+
+     <tr>
+    <td class="tg-9wq8">RED-CNN</td>
+    <td class="tg-9wq8">✓</td>
+    <td class="tg-9wq8">36.60</td>
+    <td class="tg-9wq8">0.857</td>
+    <td class="tg-9wq8">35.64</td>
+    <td class="tg-9wq8">0.876</td>
+    <td class="tg-9wq8">32.48</td>
+    <td class="tg-9wq8">0.743</td>
+    <td class="tg-9wq8">32.73</td>
+    <td class="tg-9wq8">0.836</td>
+  </tr>
+  <tr>
+    <td class="tg-9wq8">MCG</td>
+    <td class="tg-9wq8">✓</td>
+    <td class="tg-9wq8">37.97</td>
+    <td class="tg-9wq8">0.897</td>
+    <td class="tg-9wq8">38.07</td>
+    <td class="tg-9wq8">0.897</td>
+    <td class="tg-9wq8">38.12</td>
+    <td class="tg-9wq8">0.898</td>
+    <td class="tg-9wq8">38.14</td>
+    <td class="tg-9wq8">0.898</td>
+  </tr>
+  <tr>
+    <td class="tg-9wq8">DiffusionMBIR</td>
+    <td class="tg-9wq8">✓</td>
+    <td class="tg-9wq8">38.04</td>
+    <td class="tg-9wq8">0.961</td>
+    <td class="tg-9wq8">37.95</td>
+    <td class="tg-9wq8">0.960</td>
+    <td class="tg-9wq8">37.86</td>
+    <td class="tg-9wq8">0.960</td>
+    <td class="tg-9wq8">37.68</td>
+    <td class="tg-9wq8">0.959</td>
+  </tr>
+  <tr>
+    <td class="tg-9wq8">SWORD</td>
+    <td class="tg-9wq8">✓</td>
+    <td class="tg-9wq8">43.47</td>
+    <td class="tg-9wq8">0.973</td>
+    <td class="tg-9wq8">42.21</td>
+    <td class="tg-9wq8">0.968</td>
+    <td class="tg-9wq8">40.76</td>
+    <td class="tg-9wq8">0.961</td>
+    <td class="tg-9wq8">38.45</td>
+    <td class="tg-9wq8">0.948</td>
+  </tr>
+  <tr>
+    <td class="tg-9wq8">FBP</td>
+    <td class="tg-9wq8">×</td>
+    <td class="tg-9wq8">22.29</td>
+    <td class="tg-9wq8">0.482</td>
+    <td class="tg-9wq8">18.10</td>
+    <td class="tg-9wq8">0.431</td>
+    <td class="tg-9wq8">16.54</td>
+    <td class="tg-9wq8">0.395</td>
+    <td class="tg-9wq8">13.87</td>
+    <td class="tg-9wq8">0.342</td>
+  </tr>
+  <tr>
+    <td class="tg-9wq8">NeRP</td>
+    <td class="tg-9wq8">×</td>
+    <td class="tg-9wq8">26.89</td>
+    <td class="tg-9wq8">0.785</td>
+    <td class="tg-9wq8">27.27</td>
+    <td class="tg-9wq8">0.808</td>
+    <td class="tg-9wq8">26.81</td>
+    <td class="tg-9wq8">0.784</td>
+    <td class="tg-9wq8">26.93</td>
+    <td class="tg-9wq8">0.792</td>
+  </tr>
+  <tr>
+    <td class="tg-9wq8">R<sup>2</sup>-Gaussian</td>
+    <td class="tg-9wq8">×</td>
+    <td class="tg-9wq8">42.58</td>
+    <td class="tg-9wq8">0.977</td>
+    <td class="tg-9wq8">42.03</td>
+    <td class="tg-9wq8">0.974</td>
+    <td class="tg-9wq8">41.36</td>
+    <td class="tg-9wq8">0.969</td>
+    <td class="tg-9wq8">40.80</td>
+    <td class="tg-9wq8">0.965</td>
+  </tr>
+  <tr>
+    <td class="tg-9wq8">GIFT</td>
+    <td class="tg-9wq8">×</td>
+    <td class="tg-uzvj">44.46</td>
+    <td class="tg-uzvj">0.987</td>
+    <td class="tg-uzvj">43.96</td>
+    <td class="tg-uzvj">0.986</td>
+    <td class="tg-uzvj">43.47</td>
+    <td class="tg-uzvj">0.985</td>
+    <td class="tg-uzvj">42.54</td>
+    <td class="tg-uzvj">0.983</td>
+  </tr>
+</table>
+
+<table class="tg"><thead>
+  <tr>
+    <th class="tg-nrix" colspan="10" style="background-color: #2c3e5e; color: white;"><span style="font-weight:bold"> Gallbladder Stones Reconstruction</span></th>
+  </tr>
+  <tbody></tbody>
+  <tr>
+    <th class="tg-9wq8" rowspan="2">Method</th>
+    <th class="tg-9wq8" rowspan="2">Pretrain</th>
+    <th class="tg-9wq8" colspan="2">180-view</th>
+    <th class="tg-9wq8" colspan="2">120-view</th>
+    <th class="tg-9wq8" colspan="2">90-view</th>
+    <th class="tg-9wq8" colspan="2">60-view</th>
+  </tr>
+  <tr>
+    <th class="tg-9wq8">PSNR</th>
+    <th class="tg-9wq8">SSIM</th>
+    <th class="tg-9wq8">PSNR</th>
+    <th class="tg-9wq8">SSIM</th>
+    <th class="tg-9wq8">PSNR</th>
+    <th class="tg-9wq8">SSIM</th>
+    <th class="tg-9wq8">PSNR</th>
+    <th class="tg-9wq8">SSIM</th>
+  </tr></thead>
+
+<tr>
+    <td class="tg-9wq8">RED-CNN</td>
+    <td class="tg-9wq8">✓</td>
+    <td class="tg-9wq8">36.15</td>
+    <td class="tg-9wq8">0.892</td>
+    <td class="tg-9wq8">35.59</td>
+    <td class="tg-9wq8">0.913</td>
+    <td class="tg-9wq8">32.41</td>
+    <td class="tg-9wq8">0.797</td>
+    <td class="tg-9wq8">31.80</td>
+    <td class="tg-9wq8">0.868</td>
+  </tr>
+  <tr>
+    <td class="tg-9wq8">MCG</td>
+    <td class="tg-9wq8">✓</td>
+    <td class="tg-9wq8">38.13</td>
+    <td class="tg-9wq8">0.897</td>
+    <td class="tg-9wq8">38.47</td>
+    <td class="tg-9wq8">0.901</td>
+    <td class="tg-9wq8">38.01</td>
+    <td class="tg-9wq8">0.897</td>
+    <td class="tg-9wq8">37.95</td>
+    <td class="tg-9wq8">0.899</td>
+  </tr>
+  <tr>
+    <td class="tg-9wq8">DiffusionMBIR</td>
+    <td class="tg-9wq8">✓</td>
+    <td class="tg-9wq8">38.20</td>
+    <td class="tg-9wq8">0.966</td>
+    <td class="tg-9wq8">38.22</td>
+    <td class="tg-9wq8">0.966</td>
+    <td class="tg-9wq8">38.19</td>
+    <td class="tg-9wq8">0.967</td>
+    <td class="tg-9wq8">37.86</td>
+    <td class="tg-9wq8">0.965</td>
+  </tr>
+  <tr>
+    <td class="tg-9wq8">SWORD</td>
+    <td class="tg-9wq8">✓</td>
+    <td class="tg-9wq8">43.66</td>
+    <td class="tg-9wq8">0.974</td>
+    <td class="tg-9wq8">42.34</td>
+    <td class="tg-9wq8">0.969</td>
+    <td class="tg-9wq8">40.56</td>
+    <td class="tg-9wq8">0.961</td>
+    <td class="tg-9wq8">37.64</td>
+    <td class="tg-9wq8">0.943</td>
+  </tr>
+  <tr>
+    <td class="tg-9wq8">FBP</td>
+    <td class="tg-9wq8">×</td>
+    <td class="tg-9wq8">23.94</td>
+    <td class="tg-9wq8">0.548</td>
+    <td class="tg-9wq8">20.27</td>
+    <td class="tg-9wq8">0.494</td>
+    <td class="tg-9wq8">17.46</td>
+    <td class="tg-9wq8">0.445</td>
+    <td class="tg-9wq8">14.68</td>
+    <td class="tg-9wq8">0.380</td>
+  </tr>
+  <tr>
+    <td class="tg-9wq8">NeRP</td>
+    <td class="tg-9wq8">×</td>
+    <td class="tg-9wq8">27.03</td>
+    <td class="tg-9wq8">0.809</td>
+    <td class="tg-9wq8">27.12</td>
+    <td class="tg-9wq8">0.814</td>
+    <td class="tg-9wq8">26.81</td>
+    <td class="tg-9wq8">0.799</td>
+    <td class="tg-9wq8">26.86</td>
+    <td class="tg-9wq8">0.806</td>
+  </tr>
+  <tr>
+    <td class="tg-9wq8">R<sup>2</sup>-Gaussian</td>
+    <td class="tg-9wq8">×</td>
+    <td class="tg-9wq8">42.58</td>
+    <td class="tg-9wq8">0.982</td>
+    <td class="tg-9wq8">41.93</td>
+    <td class="tg-9wq8">0.979</td>
+    <td class="tg-9wq8">41.56</td>
+    <td class="tg-9wq8">0.975</td>
+    <td class="tg-uzvj">41.03</td>
+    <td class="tg-9wq8">0.972</td>
+  </tr>
+  <tr>
+    <td class="tg-9wq8">GIFT</td>
+    <td class="tg-9wq8">×</td>
+    <td class="tg-uzvj">43.73</td>
+    <td class="tg-uzvj">0.985</td>
+    <td class="tg-uzvj">42.91</td>
+    <td class="tg-uzvj">0.984</td>
+    <td class="tg-uzvj">42.15</td>
+    <td class="tg-uzvj">0.982</td>
+    <td class="tg-9wq8">40.55</td>
+    <td class="tg-uzvj">0.977</td>
+  </tr>
+</table>
+
+
+
+
+<table class="tg"><thead>
+  <tr>
+    <th class="tg-nrix" colspan="10" style="background-color: #2c3e5e; color: white;"><span style="font-weight:bold"> Hepatic Cyst Reconstruction</span></th>
+  </tr>
+  <tbody></tbody>
+  <tr>
+    <th class="tg-9wq8" rowspan="2">Method</th>
+    <th class="tg-9wq8" rowspan="2">Pretrain</th>
+    <th class="tg-9wq8" colspan="2">180-view</th>
+    <th class="tg-9wq8" colspan="2">120-view</th>
+    <th class="tg-9wq8" colspan="2">90-view</th>
+    <th class="tg-9wq8" colspan="2">60-view</th>
+  </tr>
+  <tr>
+    <th class="tg-9wq8">PSNR</th>
+    <th class="tg-9wq8">SSIM</th>
+    <th class="tg-9wq8">PSNR</th>
+    <th class="tg-9wq8">SSIM</th>
+    <th class="tg-9wq8">PSNR</th>
+    <th class="tg-9wq8">SSIM</th>
+    <th class="tg-9wq8">PSNR</th>
+    <th class="tg-9wq8">SSIM</th>
+  </tr></thead>
+
+     <tr>
+    <td class="tg-9wq8">RED-CNN</td>
+    <td class="tg-9wq8">✓</td>
+    <td class="tg-9wq8">36.74</td>
+    <td class="tg-9wq8">0.930</td>
+    <td class="tg-9wq8">35.52</td>
+    <td class="tg-9wq8">0.905</td>
+    <td class="tg-9wq8">31.33</td>
+    <td class="tg-9wq8">0.791</td>
+    <td class="tg-9wq8">33.36</td>
+    <td class="tg-9wq8">0.854</td>
+  </tr>
+  <tr>
+    <td class="tg-9wq8">MCG</td>
+    <td class="tg-9wq8">✓</td>
+    <td class="tg-9wq8">37.87</td>
+    <td class="tg-9wq8">0.891</td>
+    <td class="tg-9wq8">37.91</td>
+    <td class="tg-9wq8">0.891</td>
+    <td class="tg-9wq8">37.94</td>
+    <td class="tg-9wq8">0.891</td>
+    <td class="tg-9wq8">37.94</td>
+    <td class="tg-9wq8">0.891</td>
+  </tr>
+  <tr>
+    <td class="tg-9wq8">DiffusionMBIR</td>
+    <td class="tg-9wq8">✓</td>
+    <td class="tg-9wq8">37.92</td>
+    <td class="tg-9wq8">0.955</td>
+    <td class="tg-9wq8">38.02</td>
+    <td class="tg-9wq8">0.957</td>
+    <td class="tg-9wq8">37.91</td>
+    <td class="tg-9wq8">0.956</td>
+    <td class="tg-9wq8">37.50</td>
+    <td class="tg-9wq8">0.952</td>
+  </tr>
+  <tr>
+    <td class="tg-9wq8">SWORD</td>
+    <td class="tg-9wq8">✓</td>
+    <td class="tg-9wq8">42.84</td>
+    <td class="tg-9wq8">0.973</td>
+    <td class="tg-9wq8">41.42</td>
+    <td class="tg-9wq8">0.967</td>
+    <td class="tg-9wq8">39.81</td>
+    <td class="tg-9wq8">0.960</td>
+    <td class="tg-9wq8">37.12</td>
+    <td class="tg-9wq8">0.946</td>
+  </tr>
+  <tr>
+    <td class="tg-9wq8">FBP</td>
+    <td class="tg-9wq8">×</td>
+    <td class="tg-9wq8">25.26</td>
+    <td class="tg-9wq8">0.603</td>
+    <td class="tg-9wq8">19.94</td>
+    <td class="tg-9wq8">0.525</td>
+    <td class="tg-9wq8">17.27</td>
+    <td class="tg-9wq8">0.475</td>
+    <td class="tg-9wq8">14.26</td>
+    <td class="tg-9wq8">0.416</td>
+  </tr>
+  <tr>
+    <td class="tg-9wq8">NeRP</td>
+    <td class="tg-9wq8">×</td>
+    <td class="tg-9wq8">26.65</td>
+    <td class="tg-9wq8">0.808</td>
+    <td class="tg-9wq8">26.57</td>
+    <td class="tg-9wq8">0.804</td>
+    <td class="tg-9wq8">26.65</td>
+    <td class="tg-9wq8">0.808</td>
+    <td class="tg-9wq8">26.39</td>
+    <td class="tg-9wq8">0.799</td>
+  </tr>
+  <tr>
+    <td class="tg-9wq8">R<sup>2</sup>-Gaussian</td>
+    <td class="tg-9wq8">×</td>
+    <td class="tg-9wq8">42.05</td>
+    <td class="tg-9wq8">0.976</td>
+    <td class="tg-9wq8">41.57</td>
+    <td class="tg-9wq8">0.972</td>
+    <td class="tg-9wq8">40.83</td>
+    <td class="tg-9wq8">0.967</td>
+    <td class="tg-uzvj">40.02</td>
+    <td class="tg-9wq8">0.966</td>
+  </tr>
+  <tr>
+    <td class="tg-9wq8">GIFT</td>
+    <td class="tg-9wq8">×</td>
+    <td class="tg-uzvj">42.96</td>
+    <td class="tg-uzvj">0.981</td>
+    <td class="tg-uzvj">42.29</td>
+    <td class="tg-uzvj">0.980</td>
+    <td class="tg-uzvj">41.47</td>
+    <td class="tg-uzvj">0.977</td>
+    <td class="tg-9wq8">39.12</td>
+    <td class="tg-uzvj">0.971</td>
+  </tr>
+</table>
+
+<table class="tg"><thead>
+  <tr>
+    <th class="tg-nrix" colspan="10" style="background-color: #2c3e5e; color: white;"><span style="font-weight:bold"> Elbow Fracture Reconstruction</span></th>
+  </tr>
+  <tbody></tbody>
+  <tr>
+    <th class="tg-9wq8" rowspan="2">Method</th>
+    <th class="tg-9wq8" rowspan="2">Pretrain</th>
+    <th class="tg-9wq8" colspan="2">180-view</th>
+    <th class="tg-9wq8" colspan="2">120-view</th>
+    <th class="tg-9wq8" colspan="2">90-view</th>
+    <th class="tg-9wq8" colspan="2">60-view</th>
+  </tr>
+  <tr>
+    <th class="tg-9wq8">PSNR</th>
+    <th class="tg-9wq8">SSIM</th>
+    <th class="tg-9wq8">PSNR</th>
+    <th class="tg-9wq8">SSIM</th>
+    <th class="tg-9wq8">PSNR</th>
+    <th class="tg-9wq8">SSIM</th>
+    <th class="tg-9wq8">PSNR</th>
+    <th class="tg-9wq8">SSIM</th>
+  </tr></thead>
+
+     <tr>
+    <td class="tg-9wq8">RED-CNN</td>
+    <td class="tg-9wq8">✓</td>
+    <td class="tg-9wq8">34.41</td>
+    <td class="tg-9wq8">0.847</td>
+    <td class="tg-9wq8">34.05</td>
+    <td class="tg-9wq8">0.789</td>
+    <td class="tg-9wq8">27.42</td>
+    <td class="tg-9wq8">0.777</td>
+    <td class="tg-9wq8">29.82</td>
+    <td class="tg-9wq8">0.732</td>
+  </tr>
+  <tr>
+    <td class="tg-9wq8">MCG</td>
+    <td class="tg-9wq8">✓</td>
+    <td class="tg-9wq8">37.20</td>
+    <td class="tg-9wq8">0.857</td>
+    <td class="tg-9wq8">37.13</td>
+    <td class="tg-9wq8">0.858</td>
+    <td class="tg-9wq8">37.08</td>
+    <td class="tg-9wq8">0.856</td>
+    <td class="tg-9wq8">36.80</td>
+    <td class="tg-9wq8">0.852</td>
+  </tr>
+  <tr>
+    <td class="tg-9wq8">DiffusionMBIR</td>
+    <td class="tg-9wq8">✓</td>
+    <td class="tg-9wq8">37.06</td>
+    <td class="tg-9wq8">0.932</td>
+    <td class="tg-9wq8">36.93</td>
+    <td class="tg-9wq8">0.930</td>
+    <td class="tg-9wq8">36.89</td>
+    <td class="tg-9wq8">0.931</td>
+    <td class="tg-9wq8">36.75</td>
+    <td class="tg-9wq8">0.930</td>
+  </tr>
+  <tr>
+    <td class="tg-9wq8">SWORD</td>
+    <td class="tg-9wq8">✓</td>
+    <td class="tg-uzvj">42.83</td>
+    <td class="tg-9wq8">0.959</td>
+    <td class="tg-9wq8">38.67</td>
+    <td class="tg-9wq8">0.917</td>
+    <td class="tg-9wq8">37.39</td>
+    <td class="tg-9wq8">0.901</td>
+    <td class="tg-9wq8">34.71</td>
+    <td class="tg-9wq8">0.865</td>
+  </tr>
+  <tr>
+    <td class="tg-9wq8">FBP</td>
+    <td class="tg-9wq8">×</td>
+    <td class="tg-9wq8">26.15</td>
+    <td class="tg-9wq8">0.459</td>
+    <td class="tg-9wq8">22.32</td>
+    <td class="tg-9wq8">0.382</td>
+    <td class="tg-9wq8">19.93</td>
+    <td class="tg-9wq8">0.337</td>
+    <td class="tg-9wq8">16.95</td>
+    <td class="tg-9wq8">0.279</td>
+  </tr>
+  <tr>
+    <td class="tg-9wq8">NeRP</td>
+    <td class="tg-9wq8">×</td>
+    <td class="tg-9wq8">28.14</td>
+    <td class="tg-9wq8">0.826</td>
+    <td class="tg-9wq8">28.31</td>
+    <td class="tg-9wq8">0.827</td>
+    <td class="tg-9wq8">28.06</td>
+    <td class="tg-9wq8">0.823</td>
+    <td class="tg-9wq8">28.18</td>
+    <td class="tg-9wq8">0.835</td>
+  </tr>
+  <tr>
+    <td class="tg-9wq8">R<sup>2</sup>-Gaussian</td>
+    <td class="tg-9wq8">×</td>
+    <td class="tg-9wq8">41.99</td>
+    <td class="tg-9wq8">0.950</td>
+    <td class="tg-9wq8">41.37</td>
+    <td class="tg-9wq8">0.946</td>
+    <td class="tg-9wq8">40.63</td>
+    <td class="tg-9wq8">0.942</td>
+    <td class="tg-uzvj">40.12</td>
+    <td class="tg-9wq8">0.939</td>
+  </tr>
+  <tr>
+    <td class="tg-9wq8">GIFT</td>
+    <td class="tg-9wq8">×</td>
+    <td class="tg-9wq8">42.82</td>
+    <td class="tg-uzvj">0.961</td>
+    <td class="tg-uzvj">41.94</td>
+    <td class="tg-uzvj">0.954</td>
+    <td class="tg-uzvj">41.19</td>
+    <td class="tg-uzvj">0.949</td>
+    <td class="tg-9wq8">39.97</td>
+    <td class="tg-uzvj">0.948</td>
+  </tr>
+</table>
+
+
+<table class="tg"><thead>
+  <tr>
+    <th class="tg-nrix" colspan="10" style="background-color: #2c3e5e; color: white;"><span style="font-weight:bold"> Spinal Fracture Reconstruction</span></th>
+  </tr>
+  <tbody></tbody>
+  <tr>
+    <th class="tg-9wq8" rowspan="2">Method</th>
+    <th class="tg-9wq8" rowspan="2">Pretrain</th>
+    <th class="tg-9wq8" colspan="2">180-view</th>
+    <th class="tg-9wq8" colspan="2">120-view</th>
+    <th class="tg-9wq8" colspan="2">90-view</th>
+    <th class="tg-9wq8" colspan="2">60-view</th>
+  </tr>
+  <tr>
+    <th class="tg-9wq8">PSNR</th>
+    <th class="tg-9wq8">SSIM</th>
+    <th class="tg-9wq8">PSNR</th>
+    <th class="tg-9wq8">SSIM</th>
+    <th class="tg-9wq8">PSNR</th>
+    <th class="tg-9wq8">SSIM</th>
+    <th class="tg-9wq8">PSNR</th>
+    <th class="tg-9wq8">SSIM</th>
+  </tr></thead>
+
+   <tr>
+    <td class="tg-9wq8">RED-CNN</td>
+    <td class="tg-9wq8">✓</td>
+    <td class="tg-9wq8">23.86</td>
+    <td class="tg-9wq8">0.866</td>
+    <td class="tg-9wq8">23.94</td>
+    <td class="tg-9wq8">0.841</td>
+    <td class="tg-9wq8">23.92</td>
+    <td class="tg-9wq8">0.832</td>
+    <td class="tg-9wq8">23.70</td>
+    <td class="tg-9wq8">0.810</td>
+  </tr>
+  <tr>
+    <td class="tg-9wq8">MCG</td>
+    <td class="tg-9wq8">✓</td>
+    <td class="tg-9wq8">38.52</td>
+    <td class="tg-9wq8">0.913</td>
+    <td class="tg-9wq8">38.52</td>
+    <td class="tg-9wq8">0.913</td>
+    <td class="tg-9wq8">38.48</td>
+    <td class="tg-9wq8">0.912</td>
+    <td class="tg-9wq8">38.40</td>
+    <td class="tg-9wq8">0.911</td>
+  </tr>
+  <tr>
+    <td class="tg-9wq8">DiffusionMBIR</td>
+    <td class="tg-9wq8">✓</td>
+    <td class="tg-9wq8">39.34</td>
+    <td class="tg-9wq8">0.973</td>
+    <td class="tg-9wq8">39.27</td>
+    <td class="tg-9wq8">0.973</td>
+    <td class="tg-uzvj">39.08</td>
+    <td class="tg-uzvj">0.972</td>
+    <td class="tg-uzvj">38.49</td>
+    <td class="tg-uzvj">0.969</td>
+  </tr>
+  <tr>
+    <td class="tg-9wq8">SWORD</td>
+    <td class="tg-9wq8">✓</td>
+    <td class="tg-9wq8">40.94</td>
+    <td class="tg-9wq8">0.946</td>
+    <td class="tg-9wq8">38.02</td>
+    <td class="tg-9wq8">0.930</td>
+    <td class="tg-9wq8">34.68</td>
+    <td class="tg-9wq8">0.901</td>
+    <td class="tg-9wq8">28.85</td>
+    <td class="tg-9wq8">0.834</td>
+  </tr>
+  <tr>
+    <td class="tg-9wq8">FBP</td>
+    <td class="tg-9wq8">×</td>
+    <td class="tg-9wq8">16.41</td>
+    <td class="tg-9wq8">0.793</td>
+    <td class="tg-9wq8">15.20</td>
+    <td class="tg-9wq8">0.766</td>
+    <td class="tg-9wq8">14.73</td>
+    <td class="tg-9wq8">0.741</td>
+    <td class="tg-9wq8">13.96</td>
+    <td class="tg-9wq8">0.698</td>
+  </tr>
+  <tr>
+    <td class="tg-9wq8">NeRP</td>
+    <td class="tg-9wq8">×</td>
+    <td class="tg-9wq8">28.10</td>
+    <td class="tg-9wq8">0.847</td>
+    <td class="tg-9wq8">26.24</td>
+    <td class="tg-9wq8">0.779</td>
+    <td class="tg-9wq8">27.95</td>
+    <td class="tg-9wq8">0.840</td>
+    <td class="tg-9wq8">26.48</td>
+    <td class="tg-9wq8">0.790</td>
+  </tr>
+  <tr>
+    <td class="tg-9wq8">R<sup>2</sup>-Gaussian</td>
+    <td class="tg-9wq8">×</td>
+    <td class="tg-9wq8">40.51</td>
+    <td class="tg-9wq8">0.970</td>
+    <td class="tg-9wq8">39.06</td>
+    <td class="tg-9wq8">0.961</td>
+    <td class="tg-9wq8">38.33</td>
+    <td class="tg-9wq8">0.957</td>
+    <td class="tg-9wq8">37.98</td>
+    <td class="tg-9wq8">0.953</td>
+  </tr>
+  <tr>
+    <td class="tg-9wq8">GIFT</td>
+    <td class="tg-9wq8">×</td>
+    <td class="tg-uzvj">41.23</td>
+    <td class="tg-uzvj">0.981</td>
+    <td class="tg-uzvj">39.70</td>
+    <td class="tg-uzvj">0.977</td>
+    <td class="tg-9wq8">38.41</td>
+    <td class="tg-9wq8">0.971</td>
+    <td class="tg-9wq8">37.68</td>
+    <td class="tg-9wq8">0.968</td>
+  </tr>
+</table>
+
+<table class="tg"><thead>
+  <tr>
+    <th class="tg-nrix" colspan="10" style="background-color: #2c3e5e; color: white;"><span style="font-weight:bold"> Foot Fracture Reconstruction</span></th>
+  </tr>
+  <tbody></tbody>
+  <tr>
+    <th class="tg-9wq8" rowspan="2">Method</th>
+    <th class="tg-9wq8" rowspan="2">Pretrain</th>
+    <th class="tg-9wq8" colspan="2">180-view</th>
+    <th class="tg-9wq8" colspan="2">120-view</th>
+    <th class="tg-9wq8" colspan="2">90-view</th>
+    <th class="tg-9wq8" colspan="2">60-view</th>
+  </tr>
+  <tr>
+    <th class="tg-9wq8">PSNR</th>
+    <th class="tg-9wq8">SSIM</th>
+    <th class="tg-9wq8">PSNR</th>
+    <th class="tg-9wq8">SSIM</th>
+    <th class="tg-9wq8">PSNR</th>
+    <th class="tg-9wq8">SSIM</th>
+    <th class="tg-9wq8">PSNR</th>
+    <th class="tg-9wq8">SSIM</th>
+  </tr></thead>
+
+    <tr>
+    <td class="tg-9wq8">RED-CNN</td>
+    <td class="tg-9wq8">✓</td>
+    <td class="tg-9wq8">37.53</td>
+    <td class="tg-9wq8">0.860</td>
+    <td class="tg-9wq8">35.61</td>
+    <td class="tg-9wq8">0.783</td>
+    <td class="tg-9wq8">32.52</td>
+    <td class="tg-9wq8">0.817</td>
+    <td class="tg-9wq8">32.46</td>
+    <td class="tg-9wq8">0.837</td>
+  </tr>
+  <tr>
+    <td class="tg-9wq8">MCG</td>
+    <td class="tg-9wq8">✓</td>
+    <td class="tg-9wq8">39.40</td>
+    <td class="tg-9wq8">0.891</td>
+    <td class="tg-9wq8">39.62</td>
+    <td class="tg-9wq8">0.895</td>
+    <td class="tg-9wq8">39.43</td>
+    <td class="tg-9wq8">0.894</td>
+    <td class="tg-9wq8">39.45</td>
+    <td class="tg-9wq8">0.894</td>
+  </tr>
+  <tr>
+    <td class="tg-9wq8">DiffusionMBIR</td>
+    <td class="tg-9wq8">✓</td>
+    <td class="tg-9wq8">40.45</td>
+    <td class="tg-9wq8">0.956</td>
+    <td class="tg-9wq8">40.31</td>
+    <td class="tg-9wq8">0.955</td>
+    <td class="tg-9wq8">40.22</td>
+    <td class="tg-9wq8">0.954</td>
+    <td class="tg-uzvj">40.26</td>
+    <td class="tg-9wq8">0.957</td>
+  </tr>
+  <tr>
+    <td class="tg-9wq8">SWORD</td>
+    <td class="tg-9wq8">✓</td>
+    <td class="tg-9wq8">34.92</td>
+    <td class="tg-9wq8">0.927</td>
+    <td class="tg-9wq8">36.40</td>
+    <td class="tg-9wq8">0.905</td>
+    <td class="tg-9wq8">31.95</td>
+    <td class="tg-9wq8">0.866</td>
+    <td class="tg-9wq8">28.33</td>
+    <td class="tg-9wq8">0.783</td>
+  </tr>
+  <tr>
+    <td class="tg-9wq8">FBP</td>
+    <td class="tg-9wq8">×</td>
+    <td class="tg-9wq8">23.45</td>
+    <td class="tg-9wq8">0.235</td>
+    <td class="tg-9wq8">18.80</td>
+    <td class="tg-9wq8">0.181</td>
+    <td class="tg-9wq8">17.23</td>
+    <td class="tg-9wq8">0.160</td>
+    <td class="tg-9wq8">14.46</td>
+    <td class="tg-9wq8">0.132</td>
+  </tr>
+  <tr>
+    <td class="tg-9wq8">NeRP</td>
+    <td class="tg-9wq8">×</td>
+    <td class="tg-9wq8">30.69</td>
+    <td class="tg-9wq8">0.921</td>
+    <td class="tg-9wq8">30.82</td>
+    <td class="tg-9wq8">0.926</td>
+    <td class="tg-9wq8">30.76</td>
+    <td class="tg-9wq8">0.932</td>
+    <td class="tg-9wq8">30.56</td>
+    <td class="tg-9wq8">0.927</td>
+  </tr>
+  <tr>
+    <td class="tg-9wq8">R<sup>2</sup>-Gaussian</td>
+    <td class="tg-9wq8">×</td>
+    <td class="tg-9wq8">39.97</td>
+    <td class="tg-9wq8">0.960</td>
+    <td class="tg-9wq8">39.12</td>
+    <td class="tg-9wq8">0.956</td>
+    <td class="tg-9wq8">38.46</td>
+    <td class="tg-9wq8">0.951</td>
+    <td class="tg-9wq8">37.90</td>
+    <td class="tg-9wq8">0.949</td>
+  </tr>
+  <tr>
+    <td class="tg-9wq8">GIFT</td>
+    <td class="tg-9wq8">×</td>
+    <td class="tg-uzvj">41.81</td>
+    <td class="tg-uzvj">0.981</td>
+    <td class="tg-uzvj">41.21</td>
+    <td class="tg-uzvj">0.980</td>
+    <td class="tg-uzvj">40.51</td>
+    <td class="tg-uzvj">0.974</td>
+    <td class="tg-9wq8">39.60</td>
+    <td class="tg-uzvj">0.977</td>
+  </tr>
+</table>
+
+<table class="tg"><thead>
+  <tr>
+    <th class="tg-nrix" colspan="10" style="background-color: #2c3e5e; color: white;"><span style="font-weight:bold"> Wrist Fracture Reconstruction</span></th>
+  </tr>
+  <tbody></tbody>
+  <tr>
+    <th class="tg-9wq8" rowspan="2">Method</th>
+    <th class="tg-9wq8" rowspan="2">Pretrain</th>
+    <th class="tg-9wq8" colspan="2">180-view</th>
+    <th class="tg-9wq8" colspan="2">120-view</th>
+    <th class="tg-9wq8" colspan="2">90-view</th>
+    <th class="tg-9wq8" colspan="2">60-view</th>
+  </tr>
+  <tr>
+    <th class="tg-9wq8">PSNR</th>
+    <th class="tg-9wq8">SSIM</th>
+    <th class="tg-9wq8">PSNR</th>
+    <th class="tg-9wq8">SSIM</th>
+    <th class="tg-9wq8">PSNR</th>
+    <th class="tg-9wq8">SSIM</th>
+    <th class="tg-9wq8">PSNR</th>
+    <th class="tg-9wq8">SSIM</th>
+  </tr></thead>
+
+   <tr>
+    <td class="tg-9wq8">RED-CNN</td>
+    <td class="tg-9wq8">✓</td>
+    <td class="tg-9wq8">36.61</td>
+    <td class="tg-9wq8">0.810</td>
+    <td class="tg-9wq8">34.73</td>
+    <td class="tg-9wq8">0.825</td>
+    <td class="tg-9wq8">31.73</td>
+    <td class="tg-9wq8">0.870</td>
+    <td class="tg-9wq8">30.78</td>
+    <td class="tg-9wq8">0.744</td>
+  </tr>
+  <tr>
+    <td class="tg-9wq8">MCG</td>
+    <td class="tg-9wq8">✓</td>
+    <td class="tg-9wq8">37.14</td>
+    <td class="tg-9wq8">0.887</td>
+    <td class="tg-9wq8">37.53</td>
+    <td class="tg-9wq8">0.889</td>
+    <td class="tg-9wq8">37.65</td>
+    <td class="tg-9wq8">0.890</td>
+    <td class="tg-9wq8">37.64</td>
+    <td class="tg-9wq8">0.889</td>
+  </tr>
+  <tr>
+    <td class="tg-9wq8">DiffusionMBIR</td>
+    <td class="tg-9wq8">✓</td>
+    <td class="tg-9wq8">36.91</td>
+    <td class="tg-9wq8">0.953</td>
+    <td class="tg-9wq8">36.94</td>
+    <td class="tg-9wq8">0.954</td>
+    <td class="tg-9wq8">36.73</td>
+    <td class="tg-9wq8">0.952</td>
+    <td class="tg-9wq8">36.31</td>
+    <td class="tg-9wq8">0.950</td>
+  </tr>
+  <tr>
+    <td class="tg-9wq8">SWORD</td>
+    <td class="tg-9wq8">✓</td>
+    <td class="tg-9wq8">36.74</td>
+    <td class="tg-9wq8">0.903</td>
+    <td class="tg-9wq8">33.91</td>
+    <td class="tg-9wq8">0.874</td>
+    <td class="tg-9wq8">31.57</td>
+    <td class="tg-9wq8">0.832</td>
+    <td class="tg-9wq8">28.91</td>
+    <td class="tg-9wq8">0.766</td>
+  </tr>
+  <tr>
+    <td class="tg-9wq8">FBP</td>
+    <td class="tg-9wq8">×</td>
+    <td class="tg-9wq8">21.35</td>
+    <td class="tg-9wq8">0.231</td>
+    <td class="tg-9wq8">17.95</td>
+    <td class="tg-9wq8">0.197</td>
+    <td class="tg-9wq8">15.69</td>
+    <td class="tg-9wq8">0.174</td>
+    <td class="tg-9wq8">12.96</td>
+    <td class="tg-9wq8">0.146</td>
+  </tr>
+  <tr>
+    <td class="tg-9wq8">NeRP</td>
+    <td class="tg-9wq8">×</td>
+    <td class="tg-9wq8">29.55</td>
+    <td class="tg-9wq8">0.893</td>
+    <td class="tg-9wq8">28.77</td>
+    <td class="tg-9wq8">0.891</td>
+    <td class="tg-9wq8">29.62</td>
+    <td class="tg-9wq8">0.897</td>
+    <td class="tg-9wq8">29.56</td>
+    <td class="tg-9wq8">0.893</td>
+  </tr>
+  <tr>
+    <td class="tg-9wq8">R<sup>2</sup>-Gaussian</td>
+    <td class="tg-9wq8">×</td>
+    <td class="tg-9wq8">38.42</td>
+    <td class="tg-9wq8">0.974</td>
+    <td class="tg-9wq8">38.04</td>
+    <td class="tg-9wq8">0.973</td>
+    <td class="tg-9wq8">37.66</td>
+    <td class="tg-9wq8">0.970</td>
+    <td class="tg-9wq8">36.98</td>
+    <td class="tg-9wq8">0.967</td>
+  </tr>
+  <tr>
+    <td class="tg-9wq8">GIFT</td>
+    <td class="tg-9wq8">×</td>
+    <td class="tg-uzvj">40.28</td>
+    <td class="tg-uzvj">0.984</td>
+    <td class="tg-uzvj">39.71</td>
+    <td class="tg-uzvj">0.983</td>
+    <td class="tg-uzvj">38.89</td>
+    <td class="tg-uzvj">0.976</td>
+    <td class="tg-uzvj">37.78</td>
+    <td class="tg-uzvj">0.973</td>
+  </tr>
+</table>
+
+<table class="tg"><thead>
+  <tr>
+    <th class="tg-nrix" colspan="10" style="background-color: #2c3e5e; color: white;"><span style="font-weight:bold"> Subarachnoid Hemorrhage</span></th>
+  </tr>
+  <tbody></tbody>
+  <tr>
+    <th class="tg-9wq8" rowspan="2">Method</th>
+    <th class="tg-9wq8" rowspan="2">Pretrain</th>
+    <th class="tg-9wq8" colspan="2">180-view</th>
+    <th class="tg-9wq8" colspan="2">120-view</th>
+    <th class="tg-9wq8" colspan="2">90-view</th>
+    <th class="tg-9wq8" colspan="2">60-view</th>
+  </tr>
+  <tr>
+    <th class="tg-9wq8">PSNR</th>
+    <th class="tg-9wq8">SSIM</th>
+    <th class="tg-9wq8">PSNR</th>
+    <th class="tg-9wq8">SSIM</th>
+    <th class="tg-9wq8">PSNR</th>
+    <th class="tg-9wq8">SSIM</th>
+    <th class="tg-9wq8">PSNR</th>
+    <th class="tg-9wq8">SSIM</th>
+  </tr></thead>
+
+    <tr>
+    <td class="tg-9wq8">RED-CNN</td>
+    <td class="tg-9wq8">✓</td>
+    <td class="tg-9wq8">29.52</td>
+    <td class="tg-9wq8">0.874</td>
+    <td class="tg-9wq8">29.65</td>
+    <td class="tg-9wq8">0.877</td>
+    <td class="tg-9wq8">29.55</td>
+    <td class="tg-9wq8">0.877</td>
+    <td class="tg-9wq8">29.42</td>
+    <td class="tg-9wq8">0.863</td>
+  </tr>
+  <tr>
+    <td class="tg-9wq8">MCG</td>
+    <td class="tg-9wq8">✓</td>
+    <td class="tg-9wq8">38.78</td>
+    <td class="tg-9wq8">0.908</td>
+    <td class="tg-9wq8">38.87</td>
+    <td class="tg-9wq8">0.909</td>
+    <td class="tg-9wq8">38.81</td>
+    <td class="tg-9wq8">0.908</td>
+    <td class="tg-9wq8">38.79</td>
+    <td class="tg-9wq8">0.908</td>
+  </tr>
+  <tr>
+    <td class="tg-9wq8">DiffusionMBIR</td>
+    <td class="tg-9wq8">✓</td>
+    <td class="tg-9wq8">39.46</td>
+    <td class="tg-9wq8">0.975</td>
+    <td class="tg-9wq8">39.38</td>
+    <td class="tg-9wq8">0.975</td>
+    <td class="tg-9wq8">39.20</td>
+    <td class="tg-9wq8">0.974</td>
+    <td class="tg-9wq8">38.70</td>
+    <td class="tg-9wq8">0.973</td>
+  </tr>
+  <tr>
+    <td class="tg-9wq8">SWORD</td>
+    <td class="tg-9wq8">✓</td>
+    <td class="tg-9wq8">42.54</td>
+    <td class="tg-9wq8">0.965</td>
+    <td class="tg-9wq8">39.60</td>
+    <td class="tg-9wq8">0.955</td>
+    <td class="tg-9wq8">36.71</td>
+    <td class="tg-9wq8">0.938</td>
+    <td class="tg-9wq8">31.84</td>
+    <td class="tg-9wq8">0.895</td>
+  </tr>
+  <tr>
+    <td class="tg-9wq8">FBP</td>
+    <td class="tg-9wq8">×</td>
+    <td class="tg-9wq8">21.31</td>
+    <td class="tg-9wq8">0.440</td>
+    <td class="tg-9wq8">20.84</td>
+    <td class="tg-9wq8">0.423</td>
+    <td class="tg-9wq8">19.22</td>
+    <td class="tg-9wq8">0.404</td>
+    <td class="tg-9wq8">17.93</td>
+    <td class="tg-9wq8">0.361</td>
+  </tr>
+  <tr>
+    <td class="tg-9wq8">NeRP</td>
+    <td class="tg-9wq8">×</td>
+    <td class="tg-9wq8">23.72</td>
+    <td class="tg-9wq8">0.760</td>
+    <td class="tg-9wq8">23.34</td>
+    <td class="tg-9wq8">0.760</td>
+    <td class="tg-9wq8">23.84</td>
+    <td class="tg-9wq8">0.800</td>
+    <td class="tg-9wq8">24.04</td>
+    <td class="tg-9wq8">0.791</td>
+  </tr>
+  <tr>
+    <td class="tg-9wq8">R<sup>2</sup>-Gaussian</td>
+    <td class="tg-9wq8">×</td>
+    <td class="tg-9wq8">41.89</td>
+    <td class="tg-9wq8">0.973</td>
+    <td class="tg-9wq8">41.11</td>
+    <td class="tg-9wq8">0.968</td>
+    <td class="tg-9wq8">40.35</td>
+    <td class="tg-9wq8">0.964</td>
+    <td class="tg-9wq8">39.77</td>
+    <td class="tg-9wq8">0.956</td>
+  </tr>
+  <tr>
+    <td class="tg-9wq8">GIFT</td>
+    <td class="tg-9wq8">×</td>
+    <td class="tg-uzvj">43.29</td>
+    <td class="tg-uzvj">0.993</td>
+    <td class="tg-uzvj">42.74</td>
+    <td class="tg-uzvj">0.993</td>
+    <td class="tg-uzvj">41.98</td>
+    <td class="tg-uzvj">0.992</td>
+    <td class="tg-uzvj">41.02</td>
+    <td class="tg-uzvj">0.992</td>
+  </tr>
+</table>
+</div>
+
+
+
+
+
+
+
 </body>
 </html>
  
