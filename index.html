@@ -429,13 +429,13 @@
 	  			  <tr>
 	  	              <td align=center width=150px>
 	  					<center>
-							<span style="font-size:20px"><a href='https://openreview.net/forum?id=0MuvSVXmTi'> [Paper]</a></span>
+							<span style="font-size:20px"><a href='https://openreview.net/forum?id=0MuvSVXmTi'> Paper</a></span>
 							&nbsp&nbsp&nbsp&nbsp&nbsp
-	  						<span style="font-size:20px"><a href='https://huggingface.co/datasets/WSKINGDOM/MORE'> [Dataset]</a></span>
+	  						<span style="font-size:20px"><a href='https://huggingface.co/datasets/WSKINGDOM/MORE'> Dataset</a></span>
 							  &nbsp&nbsp&nbsp&nbsp&nbsp
-							<span style="font-size:20px"><a href='Assets/Appendix.pdf'> [Appendix]</a></span>
+							<span style="font-size:20px"><a href='Assets/Appendix.pdf'> Appendix</a></span>
 							  &nbsp&nbsp&nbsp&nbsp&nbsp
-							<span style="font-size:20px"><a href='https://huggingface.co/datasets/WSKINGDOM/MORE/blob/main/code.zip'> [Code]</a></span>
+							<span style="font-size:20px"><a href='https://huggingface.co/datasets/WSKINGDOM/MORE/blob/main/code.zip'> Code</a></span>
 							  &nbsp&nbsp&nbsp&nbsp&nbsp
 		  		  		</center>
 		  		  	  </td>
@@ -487,6 +487,8 @@
 		<img name="stone" src = "./Assets/teaser_00.png", width="100%"></img>
 	</div>
 
+
+
 	<div class="content" id="GIFT">
 		<table align=center width=850px>
 			<center><h1>GIFT Model</h1></center>
@@ -496,10 +498,45 @@
 			Your browser does not support the video tag.
 		  </video>
 		  <br></br>
-		<p>Currently we provide the code of all models in the supplementary materials. </a></p>
-		<br>Below is our distinctive pipeline of GIFT from previous neural-network based methods:</br>
-		<!-- <img name="stone" src = "./Assets/Pipeline_00.png", width="100%"></img> -->
-		<br></br>
+    <table align=center width=850px id="innovation">
+			<center><h2>Innovation Comparison</h2></center>
+		</table>
+  Neural-network-based DLR methods can be typically divided into two categories:
+  <br></br>
+  Direct Learning methods learns the mapping from raw measurements to reconstructed images directly by the neural-networks, such as <a href="https://www.nature.com/articles/nature25988">AUTOMAP</a> and <a href="https://ieeexplore.ieee.org/document/8950464">iRadonMAP</a>.
+  <br></br>
+  <br></br>
+  <img name="stone" src = "./Assets/direct.png", width="100%"></img>
+  <br></br>
+  <br></br>
+  Indirect Learning methods treat CT reconstruction as a high-level denoising problem, processing raw sinogram data through FBP or IR to the image domain, and aim to train a network to map from low-dose to full-dose sinograms or images. Typical methods include
+  <a href="https://pubmed.ncbi.nlm.nih.gov/28622671/">RED-CNN</a>, <a href="https://ieeexplore.ieee.org/document/7949028">FBPConvNet</a>, etc.
+  <br></br>
+  <br></br>
+  <img name="stone" src = "./Assets/indirect.png", width="100%"></img>
+  <br></br>
+  <br></br>
+  The most advanced DLR methods are based on diffusion models, such as <a href="https://openaccess.thecvf.com/content/CVPR2023/papers/Chung_Solving_3D_Inverse_Problems_Using_Pre-Trained_2D_Diffusion_Models_CVPR_2023_paper.pdf">DiffusionMBIR</a>, <a href="https://ieeexplore.ieee.org/document/10403850">SWORD</a>, etc. These methods learn the score function of the posterior distribution of the image given the sinogram data, and can be used to reconstruct high-quality images from low-dose sinograms.
+  The diffusion models have shown superior performance in CT reconstruction tasks. The following figure is sourced from <a href="https://ieeexplore.ieee.org/document/10403850">SWORD</a>
+  <br></br>
+  <br></br>
+  <img name="stone" src = "./Assets/diffusion.png", width="100%"></img>
+  <br></br>
+  <br></br>
+  Compared to these methods, our GIFT model does not rely on the training of any neural networks and can directly reconstruct high-quality images under the supervision of low-dose sinograms.
+  <br></br>
+  On the other hand, 3D Gaussian-Based method <a href="https://proceedings.neurips.cc/paper_files/paper/2024/file/4f550cb7b30b59553e50cd08a9dbf068-Paper-Conference.pdf">R<sup>2</sup>-Gaussian</a> is a recent method that uses a 3D Gaussian representation to model the CT image, and can achieve high-quality reconstruction results.
+  R<sup>2</sup>-Gaussian employs rectified radiative Gaussian kernels to represent 3D density fields and culls the Gaussians in 3D tiles shaped 8x8x8 to reduce the computational cost. The following figure is sourced from the pipeline of R<sup>2</sup>-Gaussian:
+  <br></br>
+  <br></br>
+  <img name="stone" src = "./Assets/r2.png", width="100%"></img>
+  <br></br>
+  <br></br>
+  Compared to R<sup>2</sup>-Gaussian, our GIFT model (1) represents all Gaussians in 3-sigma truncated format to reduce the computational complexity,
+  (2) directly reconstructs the whole CT volume and optimizes all involved Gaussians. 
+
+  Extensive Benchmark demonstrates that our GIFT model is a stronger baseline that will benefits the community.
+  		<br>Below is our distinctive pipeline of GIFT from previous neural-network based methods:</br>
 		<br><img name="stone" src = "./Assets/GIFT_00.png", width="100%"></img></br>
 	</div>
 
