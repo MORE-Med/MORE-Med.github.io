@@ -1,6 +1,6 @@
 <script src="http://www.google.com/jsapi" type="text/javascript"></script> 
 <script type="text/javascript">google.load("jquery", "1.3.2");</script>
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <style type="text/css">
 	body {
 		font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
@@ -368,6 +368,138 @@
 }
 </style>
 
+
+<style>
+  /* 内部导航专用样式 */
+  .internal-nav {
+    margin: 40px auto;
+    padding: 25px;
+    text-align: center;
+    max-width: 800px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: 16px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    border: 1px solid #e0e0e0;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .internal-nav::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #3498db, #9b59b6, #2ecc71, #e74c3c);
+    z-index: 1;
+  }
+  
+  .nav-title {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    font-size: 1.8rem;
+    margin-bottom: 28px;
+    color: #2c3e50;
+    background: white;
+    padding: 8px 25px;
+    border-radius: 50px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  }
+  
+  .nav-title i {
+    margin-right: 15px;
+    color: #3498db;
+    font-size: 1.5rem;
+  }
+  
+  .nav-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 15px;
+  }
+  
+  .nav-card {
+    background: white;
+    border-radius: 12px;
+    padding: 25px 15px;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    border: 1px solid #eaeaea;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+  }
+  
+  .nav-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background: #f1f1f1;
+    z-index: -1;
+    transition: width 0.3s ease;
+  }
+  
+  .nav-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.1);
+    border-color: #d5d5d5;
+  }
+  
+  .nav-card:hover::before {
+    width: 100%;
+    background: linear-gradient(to right, rgba(52, 152, 219, 0.1), transparent);
+  }
+  
+  .nav-card i {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: #3498db;
+    transition: all 0.3s ease;
+  }
+  
+  .nav-card:hover i {
+    transform: scale(1.2);
+    color: #e74c3c;
+  }
+  
+  .nav-card h3 {
+    margin: 0 0 10px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #2c3e50;
+  }
+  
+  .nav-card p {
+    margin: 0;
+    font-size: 0.85rem;
+    color: #7f8c8d;
+    opacity: 0.8;
+  }
+  
+  .nav-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    height: 100%;
+  }
+  
+  @media (max-width: 600px) {
+    .nav-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .nav-title {
+      font-size: 1.5rem;
+    }
+  }
+</style>
+
+
 <html>
   <head>
 		<title>MORE</title>
@@ -425,32 +557,107 @@
 			<br>
           		<span style="font-size:20px"> ACM MultiMedia 2025 Dataset</span>
 			<br><br>
-	  		  <table align=center width=650px>
-	  			  <tr>
-	  	              <td align=center width=150px>
-	  					<center>
-							<span style="font-size:20px"><a href='https://openreview.net/forum?id=0MuvSVXmTi'> Paper</a></span>
-							&nbsp&nbsp&nbsp&nbsp&nbsp
-	  						<span style="font-size:20px"><a href='https://huggingface.co/datasets/WSKINGDOM/MORE'> Dataset</a></span>
-							  &nbsp&nbsp&nbsp&nbsp&nbsp
-							<span style="font-size:20px"><a href='Assets/Appendix.pdf'> Appendix</a></span>
-							  &nbsp&nbsp&nbsp&nbsp&nbsp
-							<span style="font-size:20px"><a href='https://huggingface.co/datasets/WSKINGDOM/MORE/blob/main/code.zip'> Code</a></span>
-							  &nbsp&nbsp&nbsp&nbsp&nbsp
-		  		  		</center>
-		  		  	  </td>
-	  			  <tr>
-			  </table>
+    <div class="link-container" style="display: flex; justify-content: center; margin: 20px auto; max-width: 800px;">
+      <div class="link-group">
+        <!-- Paper Link -->
+        <a href="https://openreview.net/forum?id=0MuvSVXmTi" class="icon-link">
+          <i class="fas fa-file-pdf link-icon"></i>
+          <span>Paper</span>
+        </a>
+        
+        <!-- Dataset Link -->
+        <a href="https://huggingface.co/datasets/WSKINGDOM/MORE" class="icon-link">
+          <i class="fas fa-database link-icon"></i>
+          <span>Dataset</span>
+        </a>
+        
+        <!-- Appendix Link -->
+        <a href="Assets/Appendix.pdf" class="icon-link">
+          <i class="fas fa-file-alt link-icon"></i>
+          <span>Appendix</span>
+        </a>
+        
+        <!-- Code Link -->
+        <a href="https://huggingface.co/datasets/WSKINGDOM/MORE/blob/main/code.zip" class="icon-link">
+          <i class="fas fa-code link-icon"></i>
+          <span>Code</span>
+        </a>
+      </div>
+    </div>
+
+    <style>
+      .icon-link {
+        display: inline-flex;
+        align-items: center;
+        margin: 0 15px;
+        padding: 10px 20px;
+        background-color: #363636;
+        color: white !important;
+        text-decoration: none;
+        border-radius: 50px;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        font-size: 16px;
+      }
+      
+      .link-icon {
+        font-size: 18px;
+        margin-right: 8px;
+      }
+      
+      .icon-link:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        background-color: #4a4a4a;
+      }
+      
+      .link-group {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    </style>
           </center>
-		  <p><strong>Quick Jump:</strong></p>
-			<ol>
-				<!-- <li><a href="#news">News</a></li> -->
-				<li><a href="#overview">Overview</a></li>
-				<li><a href="#more">MORE Dataset</a></li>
-				<li><a href="#GIFT">GIFT Model</a></li>
-				<li><a href="#Benchmark">MORE Benchmark</a></li>
-				<!-- <li><a href="#benchmark">Benchmarks</a></li> -->
-			</ol>
+<div class="internal-nav">
+  <div class="nav-title">
+    <i class="fas fa-route"></i>
+    Page Navigation
+  </div>
+  
+  <div class="nav-grid">
+    <!-- <a href="#overview" class="nav-link">
+      <div class="nav-card">
+        <i class="fas fa-map-marked-alt"></i>
+        <h3>Overview</h3>
+        <p>Project introduction</p>
+      </div>
+    </a> -->
+    
+    <a href="#more" class="nav-link">
+      <div class="nav-card">
+        <i class="fa-solid fa-book-medical"></i>
+        <h3>MORE Dataset</h3>
+        <p>Multilingual dataset</p>
+      </div>
+    </a>
+    
+    <a href="#GIFT" class="nav-link">
+      <div class="nav-card">
+        <i class="fas fa-cogs"></i>
+        <h3>GIFT Model</h3>
+        <p>Our novel approach</p>
+      </div>
+    </a>
+    
+    <a href="#Benchmark" class="nav-link">
+      <div class="nav-card">
+        <i class="fas fa-trophy"></i>
+        <h3>MORE Benchmark</h3>
+        <p>Evaluation results</p>
+      </div>
+    </a>
+  </div>
+</div>
 	</div>
 <!--     
 	<div class="content" id="news">
@@ -483,7 +690,7 @@
 			<center><h1>MORE Dataset</h1></center>
 		</table>
 		<p>Our dataset is available at <a href='https://huggingface.co/datasets/WSKINGDOM/MORE'> Huggingface. </a></p>
-		<br>Below is some samples of MORE dataset:</br>
+		<p><br>Below is some samples of MORE dataset:</br></p>
 		<img name="stone" src = "./Assets/teaser_00.png", width="100%"></img>
 	</div>
 
